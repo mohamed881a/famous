@@ -678,7 +678,11 @@ html[dir="ltr"] .lightbox-close{left:auto;right:22px}
 html[dir="ltr"] .step-num{left:auto;right:16px}
 html[dir="ltr"] .step-card h3{padding-left:0;padding-right:48px}
 html[dir="ltr"] .footer-col h4::after{right:auto;left:0}
+html[dir="ltr"] .footer-links a{transition:color .3s ease,padding-left .3s ease}
 html[dir="ltr"] .footer-links a:hover{padding-right:0;padding-left:6px}
+@media (max-width:420px){
+  html[dir="ltr"] .dl-actions .btn{width:100%;padding-inline:16px;white-space:normal;text-align:center}
+}
 html[dir="ltr"] .msg .bubble,
 html[dir="ltr"] .typing{border-top-right-radius:16px;border-top-left-radius:4px}
 html[dir="ltr"] .msg.user .bubble{border-top-left-radius:16px;border-top-right-radius:4px}
@@ -925,7 +929,7 @@ html[dir="ltr"] .msg.user .bubble{border-top-left-radius:16px;border-top-right-r
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"
-        title="موقع شهير للحاسبات على الخريطة" data-i18n-attr="title:loc.mapTitle;src:loc.mapSrc">
+        title="موقع شهير للحاسبات على الخريطة" data-i18n-attr="title:loc.mapTitle">
       </iframe>
     </div>
     <div class="hero-actions reveal" style="justify-content:center;margin:26px 0 0">
@@ -1222,8 +1226,7 @@ const I18N_EN = {
   "chat.placeholder": "Type your question here...",
   "chat.send": "Send",
   "lightbox.aria": "Image viewer",
-  "lightbox.alt": "Screenshot from inside the system",
-  "loc.mapSrc": "https://maps.google.com/maps?q=شهير%20للحاسبات&t=&z=15&ie=UTF8&iwloc=&output=embed&hl=en"
+  "lightbox.alt": "Screenshot from inside the system"
 };
 
 let currentLang = 'ar';
@@ -1288,6 +1291,14 @@ function applyLang(lang){
   else if (fromUrl === 'ar'){ try { localStorage.setItem('famous-lang', 'ar'); } catch (e) {} }
   document.getElementById('langToggle').addEventListener('click', () => {
     applyLang(currentLang === 'en' ? 'ar' : 'en');
+    // اختيار الزائر يتقدّم على ?lang= في الرابط: احذف الوسيط حتى لا يُلغى الاختيار عند تحديث الصفحة
+    try {
+      const url = new URL(location.href);
+      if (url.searchParams.has('lang')){
+        url.searchParams.delete('lang');
+        history.replaceState(history.state, '', url);
+      }
+    } catch (e) {}
   });
 })();
 
@@ -1465,15 +1476,16 @@ sections.forEach(sec => spyObserver.observe(sec));
   const MAX_FREE = 5;
 
   const KB = [
-    { keys:['تحميل','تنزيل','رابط','احمل','نزل','download','installer','link'],
+    { keys:['تحميل','تنزيل','رابط','احمل','نزل','download','installer'],
+      weak:['link'],
       reply:{
         ar:`حمّل النسخة مباشرة من الرابط:\nhttps://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe\n\n📥 أو اضغط زر «تحميل النسخة (exe)» بأعلى الصفحة.`,
         en:`Download the installer directly from this link:\nhttps://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe\n\n📥 Or click the “Download installer (.exe)” button on the page.` } },
-    { keys:['تثبيت','تنصيب','install','setup','set up'],
+    { keys:['تثبيت','تنصيب','ثبت','ثبّت','install','reinstall','setup','set up','set it up'],
       reply:{
         ar:`التثبيت سهل جداً في 3 خطوات 📝\n\n1️⃣ حمّل النظام من الموقع\n2️⃣ اضغط على ملف التثبيت وسيُثبَّت تلقائياً\n3️⃣ الإعداد الأولي وإدخال البيانات\n\n📸 يوجد شرح مصوّر كامل في قسم «دليل التثبيت» بالصفحة.`,
         en:`Installation is very easy — just 3 steps 📝\n\n1️⃣ Download the system from the website\n2️⃣ Run the setup file and it installs automatically\n3️⃣ Complete the initial setup and enter your details\n\n📸 A full illustrated walkthrough is available in the “Installation guide” section of the page.` } },
-    { keys:['مميزات','ميزات','خصائص','feature','benefit','advantage','capabilit'],
+    { keys:['مميزات','ميزات','خصائص','واجهة','feature','benefit','advantage','capabilit','interface','ui'],
       reply:{
         ar:`أهم مميزات «شهير» ✨\n\n🚀 أداء صاروخي ولحظي\n🖥️ شاشة بيع فورية + قارئ باركود\n⚙️ نظام مستقل وذاتي المعمارية\n💻 يعمل على جميع الأجهزة حتى الضعيفة\n🛡️ قاعدة بيانات فولاذية الأمان\n🎨 واجهة UI استثنائية وسهلة`,
         en:`Key features of Famous POS ✨\n\n🚀 Blazing-fast, real-time performance\n🖥️ Instant sales screen + barcode scanner\n⚙️ Standalone, self-contained architecture\n💻 Runs on all devices, even low-spec ones\n🛡️ Rock-solid database security\n🎨 An exceptional, easy-to-use UI` } },
@@ -1481,16 +1493,16 @@ sections.forEach(sec => spyObserver.observe(sec));
       reply:{
         ar:`توجد جولة كاملة بالصور داخل قسم «تعرّف» بالصفحة، تعرض 7 شاشات من داخل النظام (البيع، المخزون، التقارير، الفواتير... إلخ).\n\n👀 اضغط على أي صورة لعرضها بالحجم الكامل.`,
         en:`There is a full visual tour in the “Tour” section of the page, showing 7 screens from inside the system (sales, inventory, reports, invoices, and more).\n\n👀 Click any image to view it at full size.` } },
-    { keys:['موقعنا','موقعكم','لوكيشن','عنوان','خريطة','خرائط','معرض','زيارة','location','located','address','map','showroom','visit','direction','where are you'],
+    { keys:['موقعنا','موقعكم','لوكيشن','عنوان','خريطة','خرائط','معرض','زيارة','location','located','address','map','maps','showroom','visit','direction','where are you','find you','your store','your shop','your office'],
       reply:{
         ar:`يسعدنا تشريفك في معرضنا 📍\n\nموقعنا على خرائط Google:\nhttps://maps.app.goo.gl/gTkDPGX6egFwkDDb9\n\nويمكنك أيضاً مشاهدة الخريطة في قسم «الموقع» بالصفحة.`,
         en:`We'd be delighted to welcome you at our showroom 📍\n\nFind us on Google Maps:\nhttps://maps.app.goo.gl/gTkDPGX6egFwkDDb9\n\nYou can also view the map in the “Location” section of the page.` } },
     { keys:['يوزر','مستخدم','باسورد','كلمة المرور','دخول','تسجيل','username','user name','password','login','log in','sign in','credential'],
       reply:{
         ar:`تُحدَّد بيانات الدخول بعد التثبيت من إعدادات النظام، ويمكنك التواصل مع الدعم الفني على 0553183438 إذا احتجت إلى مساعدة في الدخول.`,
-        en:`Login details are set after installation from the system settings. If you need help signing in, contact technical support on 0553183438.` } },
-    { keys:['مساعدة','مشكلة','مساعده','دعم فني','الدعم الفني','help','problem','issue','error','trouble','contact','technical support','customer support','support team','phone number','call','whatsapp'],
-      weak:['دعم','support'],
+        en:`Login details are set in the system settings after installation. If you need help signing in, contact technical support on 0553183438.` } },
+    { keys:['مشكلة','دعم فني','الدعم الفني','تواصل','اتصال','اتصل','واتس','رقم الجوال','رقم الهاتف','رقمكم','problem','issue','error','trouble','contact','technical support','customer support','support team','phone number','mobile number','your number','call','whatsapp'],
+      weak:['دعم','مساعدة','مساعده','support','help'],
       reply:{
         ar:`فريق الدعم الفني متاح لخدمتك على مدار الساعة 🛠️\n\n📞 اتصال مباشر: 0553183438\n💬 واتساب: 0553183438\n\nيمكنك التواصل في أي وقت لحل أي استفسار.`,
         en:`Our technical support team is available around the clock 🛠️\n\n📞 Direct call: 0553183438\n💬 WhatsApp: 0553183438\n\nReach out anytime and we'll be glad to help.` } },
@@ -1498,15 +1510,15 @@ sections.forEach(sec => spyObserver.observe(sec));
       reply:{
         ar:`مطوّر نظام «شهير» المحاسبي هو المبرمج:\n\n👨‍💻 محمد زاهد\n\n📞 للتواصل: 0553183438\n💬 واتساب: 0553183438\n\nيمكنك التعرّف عليه أكثر من قسم «المطوّر» بالصفحة.`,
         en:`Famous POS was developed by:\n\n👨‍💻 Mohammed Zahed\n\n📞 Contact: 0553183438\n💬 WhatsApp: 0553183438\n\nYou can learn more about him in the “Developer” section of the page.` } },
-    { keys:['اجهزة','أجهزة','جهاز','كمبيوتر','موبايل','جوال','ويندوز','device','computer','pc','laptop','tablet','mobile','phone','windows','hardware','requirement','compatib','specs'],
-      reply:{
-        ar:`«شهير» يعمل بكفاءة عالية على: 💻\n\n• جميع إصدارات ويندوز (حتى القديمة)\n• الأجهزة ضعيفة الإمكانيات\n• لا يحتاج إلى تحديث العتاد\n\nخفيف جداً ومتوافق كلياً مع كل الأجهزة.`,
-        en:`Famous POS runs efficiently on: 💻\n\n• All versions of Windows (even older ones)\n• Low-spec machines\n• No hardware upgrade required\n\nExtremely lightweight and fully compatible with all devices.` } },
-    { keys:['قاعدة','بيانات','امان','أمان','حماية','database','data','security','secure','safe','backup','back up','protect'],
+    { keys:['قاعدة','بيانات','امان','أمان','حماية','database','data','security','secure','safe','backup','back up','protect','crash','انهيار','انهار'],
       reply:{
         ar:`قاعدة بيانات «شهير» فولاذية الأمان 🛡️\n\n• ثابتة ومستقرة تماماً\n• تحمي بياناتك حتى لو حدث انهيار في ويندوز\n• نسخ احتياطي تلقائي\n• لن تفقد أي معلومة أبداً`,
         en:`The Famous POS database is rock-solid and secure 🛡️\n\n• Fully robust and stable\n• Protects your data even if Windows crashes\n• Automatic backups\n• You will never lose any information` } },
-    { keys:['فاتورة','فواتير','تقارير','تقرير','invoice','report','receipt','bill'],
+    { keys:['اجهزة','أجهزة','جهاز','كمبيوتر','موبايل','جوال','ويندوز','device','computer','pc','pcs','laptop','tablet','mobile','phone','smartphone','android','iphone','ipad','mac','windows','hardware','requirement','compatib','specs'],
+      reply:{
+        ar:`«شهير» يعمل بكفاءة عالية على: 💻\n\n• جميع إصدارات ويندوز (حتى القديمة)\n• الأجهزة ضعيفة الإمكانيات\n• لا يحتاج إلى تحديث العتاد\n\nخفيف جداً ومتوافق كلياً مع كل الأجهزة.`,
+        en:`Famous POS runs efficiently on: 💻\n\n• All versions of Windows (even older ones)\n• Low-spec machines\n\nNo hardware upgrade required — it is extremely lightweight and fully compatible with all devices.` } },
+    { keys:['فاتورة','فواتير','تقارير','تقرير','invoic','report','receipt','bill','profit'],
       reply:{
         ar:`«شهير» يوفر نظام فواتير وتقارير متكامل 📊\n\n• فواتير بيع فورية\n• تقارير مبيعات لحظية\n• تقارير مخزون دقيقة\n• تقارير أرباح وخسائر\n\nكل شيء بضغطة زر!`,
         en:`Famous POS offers a complete invoicing and reporting system 📊\n\n• Instant sales invoices\n• Real-time sales reports\n• Accurate inventory reports\n• Profit and loss reports\n\nAll at the click of a button!` } },
@@ -1522,7 +1534,7 @@ sections.forEach(sec => spyObserver.observe(sec));
       reply:{
         ar:`على الرحب والسعة عميلنا العزيز 💚\n\nنحن هنا لخدمتك في أي وقت. هل تحتاج إلى مساعدة أخرى؟`,
         en:`You're most welcome 💚\n\nWe're here for you anytime. Is there anything else I can help you with?` } },
-    { keys:['مرحبا','السلام','اهلا','أهلا','هلا','hello','hi','hey','good morning','good evening','salam'],
+    { weak:['مرحبا','السلام','اهلا','أهلا','هلا','hello','hi','hey','good morning','good evening','salam'],
       reply:{
         ar:`أهلاً وسهلاً 🌟\n\nكيف يمكنني مساعدتك اليوم؟ اختر من الأزرار في الأسفل أو اكتب سؤالك بحرية.`,
         en:`Hello and welcome 🌟\n\nHow can I help you today? Choose one of the buttons below or type your question.` } }
@@ -1647,7 +1659,7 @@ sections.forEach(sec => spyObserver.observe(sec));
         <a href="${L('https://wa.me/966553183438?text=مرحباً%20فريق%20شهير،%20أحتاج%20مساعدة%20في%20نظام%20الكاشير', 'https://wa.me/966553183438?text=Hello%20Famous%20POS%20team%2C%20I%20need%20help%20with%20the%20POS%20system')}"
            target="_blank" rel="noopener"
            style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25d366 0%,#128c47 100%);color:#fff;padding:12px 22px;border-radius:999px;font-weight:800;font-size:.9rem;text-decoration:none;box-shadow:0 10px 25px rgba(37,211,102,.35);">
-          ${L('💬 تحدّث مع الدعم البشري الآن', '💬 Chat with our support team now')}
+          ${L('💬 تحدّث مع الدعم البشري الآن', '💬 Talk to human support')}
         </a>
       `;
       chatBody.appendChild(wrap);
@@ -1665,7 +1677,7 @@ sections.forEach(sec => spyObserver.observe(sec));
     respond(text);
   }
 
-  function openChat(){
+  function openChat(focusInput = true){
     chatWindow.classList.add('open');
     if (chatBadge) chatBadge.style.display = 'none';
     if (!chatInitialized){
@@ -1677,7 +1689,7 @@ sections.forEach(sec => spyObserver.observe(sec));
         showQuickOptions();
       }, 350);
     }
-    setTimeout(() => { if (chatInput) chatInput.focus(); }, 450);
+    if (focusInput) setTimeout(() => { if (chatInput) chatInput.focus(); }, 450);
   }
   function closeChat(){ chatWindow.classList.remove('open'); }
 
@@ -1706,7 +1718,7 @@ sections.forEach(sec => spyObserver.observe(sec));
     chatQuick.innerHTML = '';
     userMsgCount = 0;
     chatInitialized = false;
-    if (chatWindow.classList.contains('open')) openChat();
+    if (chatWindow.classList.contains('open')) openChat(false);
   });
 })();
 </script>
