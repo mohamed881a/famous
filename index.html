@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#198b4d">
 
 <title>شهير | نظام كاشير محاسبي احترافي - famous pos</title>
-<meta name="description" content="شهير - نظام كاشير محاسبي احترافي بأداء صاروخي، شاشة بيع فورية، تقارير دقيقة، وقاعدة بيانات آمنة. من تطوير محمد زيدان.">
+<meta name="description" content="شهير - نظام كاشير محاسبي احترافي بأداء صاروخي، شاشة بيع فورية، تقارير دقيقة، وقاعدة بيانات آمنة. من تطوير محمد زاهد.">
 <meta name="keywords" content="نظام كاشير, برنامج محاسبي, نقاط بيع, POS, شهير, famous pos, كاشير السعودية, برنامج حسابات">
-<meta name="author" content="محمد زيدان">
+<meta name="author" content="محمد زاهد">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="شهير">
@@ -92,6 +92,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .nav ul a{display:block;padding:10px 15px;border-radius:11px;font-size:.92rem;font-weight:600;color:var(--ink);transition:background .25s ease,color .25s ease}
 .nav ul a:hover{background:var(--primary-tint);color:var(--primary)}
 .nav ul a.active{background:var(--primary-soft);color:var(--primary)}
+.header-actions{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.lang-toggle{display:inline-flex;align-items:center;gap:7px;height:46px;padding:0 15px;border-radius:13px;background:var(--primary-soft);color:var(--primary);font-weight:700;font-size:.88rem;line-height:1;white-space:nowrap;transition:background .25s ease,color .25s ease,transform .25s ease}
+.lang-toggle:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
+.lang-toggle svg{width:19px;height:19px;flex-shrink:0}
 .menu-toggle{width:46px;height:46px;border-radius:13px;background:var(--primary-soft);display:none;align-items:center;justify-content:center;flex-direction:column;gap:5px}
 .menu-toggle span{width:21px;height:2.4px;background:var(--primary);border-radius:3px;transition:transform .3s ease,opacity .3s ease}
 .menu-toggle.active span:nth-child(1){transform:translateY(7.4px) rotate(45deg)}
@@ -149,7 +153,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   align-items:center;
 }
 
-.hero-content{text-align:right;max-width:600px}
+.hero-content{text-align:start;max-width:600px}
 .hero-badge{
   display:inline-flex;
   align-items:center;
@@ -562,7 +566,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 @keyframes waPulse{0%{transform:scale(1);opacity:.55}100%{transform:scale(1.65);opacity:0}}
 .whatsapp-float:hover{transform:scale(1.09) rotate(-4deg);box-shadow:0 20px 40px rgba(37,211,102,.55)}
 .whatsapp-float svg{width:32px;height:32px}
-.wa-tip{position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(8px);background:#111827;color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap;padding:7px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+.wa-tip{position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(-8px);background:#111827;color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap;padding:7px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
 .whatsapp-float:hover .wa-tip{opacity:1;transform:translateY(-50%) translateX(0)}
 
 .chat-float{position:fixed;bottom:100px;right:26px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#198b4d 0%,#136b3b 100%);color:#fff;display:grid;place-items:center;box-shadow:0 14px 32px rgba(25,139,77,.45);z-index:199;transition:transform .3s ease,box-shadow .3s ease;cursor:pointer}
@@ -571,7 +575,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .chat-float svg{width:30px;height:30px}
 .chat-badge{position:absolute;top:-4px;right:-4px;background:#ef4444;color:#fff;font-size:.7rem;font-weight:800;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;box-shadow:0 4px 10px rgba(239,68,68,.4);animation:badgePulse 1.8s ease-in-out infinite}
 @keyframes badgePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-.chat-float .chat-tip{position:absolute;left:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(8px);background:#111827;color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap;padding:7px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
+.chat-float .chat-tip{position:absolute;right:calc(100% + 12px);top:50%;transform:translateY(-50%) translateX(-8px);background:#111827;color:#fff;font-size:.78rem;font-weight:700;white-space:nowrap;padding:7px 14px;border-radius:10px;opacity:0;pointer-events:none;transition:opacity .3s ease,transform .3s ease}
 .chat-float:hover .chat-tip{opacity:1;transform:translateY(-50%) translateX(0)}
 
 .chat-window{position:fixed;bottom:175px;right:26px;width:380px;max-width:calc(100vw - 32px);height:560px;max-height:calc(100vh - 220px);background:#fff;border-radius:24px;box-shadow:0 30px 70px rgba(15,23,42,.28),0 12px 30px rgba(25,139,77,.18);z-index:250;display:flex;flex-direction:column;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(20px) scale(.96);transform-origin:bottom right;transition:opacity .35s ease,transform .35s cubic-bezier(.2,.75,.3,1),visibility .35s ease}
@@ -588,7 +592,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .chat-close:hover{background:rgba(255,255,255,.3);transform:rotate(90deg)}
 .chat-close svg{width:18px;height:18px}
 
-.chat-body{flex:1;overflow-y:auto;padding:18px 16px;background:#f8fafc;scroll-behavior:smooth;display:flex;flex-direction:column;gap:12px}
+.chat-body{flex:1;min-height:0;overflow-y:auto;padding:18px 16px;background:#f8fafc;scroll-behavior:smooth;display:flex;flex-direction:column;gap:12px}
 .chat-body::-webkit-scrollbar{width:6px}
 .chat-body::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:99px}
 
@@ -602,9 +606,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .bubble a{color:#198b4d;font-weight:700;word-break:break-all}
 .msg.user .bubble a{color:#bbf7d0;text-decoration:underline}
 
-.chat-quick{display:flex;flex-wrap:wrap;gap:6px;padding:8px 14px 10px;background:#fff;border-top:1px solid var(--line);flex-shrink:0}
+.chat-quick{display:grid;grid-template-rows:repeat(2,auto);grid-auto-flow:column;grid-auto-columns:max-content;justify-content:start;gap:6px;padding:8px 14px 10px;background:#fff;border-top:1px solid var(--line);flex-shrink:0;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:#cbd5e1 transparent}
+.chat-quick::-webkit-scrollbar{height:5px}
+.chat-quick::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:99px}
 .chat-quick:empty{display:none}
-.chip{background:var(--primary-tint);color:var(--primary);border:1px solid var(--primary-soft);border-radius:999px;padding:7px 14px;font-size:.78rem;font-weight:700;cursor:pointer;transition:background .25s ease,color .25s ease,transform .2s ease;font-family:inherit}
+.chip{background:var(--primary-tint);color:var(--primary);border:1px solid var(--primary-soft);border-radius:999px;padding:7px 14px;font-size:.78rem;font-weight:700;white-space:nowrap;cursor:pointer;transition:background .25s ease,color .25s ease,transform .2s ease;font-family:inherit}
 .chip:hover{background:var(--primary);color:#fff;transform:translateY(-2px)}
 
 .chat-input{display:flex;align-items:center;gap:8px;padding:12px 14px;background:#fff;border-top:1px solid var(--line);flex-shrink:0}
@@ -626,18 +632,22 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .chat-tip{display:none}
 
   .chat-window{
-    bottom:156px;
-    right:14px;
-    left:14px;
+    top:12px;
+    bottom:12px;
+    right:10px;
+    left:10px;
     width:auto;
-    max-width:calc(100vw - 28px);
+    max-width:none;
     height:auto;
-    max-height:calc(100vh - 200px);
-    min-height:380px;
+    max-height:none;
     border-radius:22px;
     transform-origin:bottom center;
     box-shadow:0 24px 60px rgba(15,23,42,.32), 0 10px 26px rgba(25,139,77,.18);
   }
+  .chat-quick{gap:5px;padding:8px 10px;scrollbar-width:none}
+  .chat-quick::-webkit-scrollbar{display:none}
+  .chip{padding:6px 11px;font-size:.74rem}
+  .chat-input input{font-size:16px}
 
   .whatsapp-float{width:54px;height:54px;bottom:20px;right:20px}
   .whatsapp-float svg{width:28px;height:28px}
@@ -656,28 +666,50 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   *{animation:none!important;transition-duration:.01ms!important}
   html{scroll-behavior:auto}
 }
+
+/* ==========================================================
+   النسخة الإنجليزية (اتجاه من اليسار لليمين)
+========================================================== */
+html[dir="ltr"] .hero-badge i{margin-right:0;margin-left:4px}
+html[dir="ltr"] .hero h1 .accent::after{margin-right:0;margin-left:.15em}
+html[dir="ltr"] .feature-card::before{transform-origin:left}
+html[dir="ltr"] .shot .shot-tag{right:auto;left:16px}
+html[dir="ltr"] .lightbox-close{left:auto;right:22px}
+html[dir="ltr"] .step-num{left:auto;right:16px}
+html[dir="ltr"] .step-card h3{padding-left:0;padding-right:48px}
+html[dir="ltr"] .footer-col h4::after{right:auto;left:0}
+html[dir="ltr"] .footer-links a:hover{padding-right:0;padding-left:6px}
+html[dir="ltr"] .msg .bubble,
+html[dir="ltr"] .typing{border-top-right-radius:16px;border-top-left-radius:4px}
+html[dir="ltr"] .msg.user .bubble{border-top-left-radius:16px;border-top-right-radius:4px}
 </style>
 </head>
 <body>
 
 <header class="site-header" id="header">
   <div class="container header-inner">
-    <a href="#home" class="brand" aria-label="شهير - الصفحة الرئيسية">
-      <img src="logo.png" alt="شعار نظام شهير" class="brand-logo">
+    <a href="#home" class="brand" aria-label="شهير - الصفحة الرئيسية" data-i18n-attr="aria-label:brand.aria">
+      <img src="logo.png" alt="شعار نظام شهير" data-i18n-attr="alt:logo.alt" class="brand-logo">
     </a>
-    <nav class="nav" id="nav" aria-label="القائمة الرئيسية">
+    <nav class="nav" id="nav" aria-label="القائمة الرئيسية" data-i18n-attr="aria-label:nav.aria">
       <ul>
-        <li><a href="#home" class="nav-link active">الرئيسية</a></li>
-        <li><a href="#download" class="nav-link">تحميل</a></li>
-        <li><a href="#learn" class="nav-link">تعرّف</a></li>
-        <li><a href="#support" class="nav-link">الدعم الفني</a></li>
-        <li><a href="#location" class="nav-link">الموقع</a></li>
-        <li><a href="#developer" class="nav-link">المطوّر</a></li>
+        <li><a href="#home" class="nav-link active" data-i18n="nav.home">الرئيسية</a></li>
+        <li><a href="#download" class="nav-link" data-i18n="nav.download">تحميل</a></li>
+        <li><a href="#learn" class="nav-link" data-i18n="nav.learn">تعرّف</a></li>
+        <li><a href="#support" class="nav-link" data-i18n="nav.support">الدعم الفني</a></li>
+        <li><a href="#location" class="nav-link" data-i18n="nav.location">الموقع</a></li>
+        <li><a href="#developer" class="nav-link" data-i18n="nav.developer">المطوّر</a></li>
       </ul>
     </nav>
-    <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch to English">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>
+        <span id="langLabel" lang="en">English</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة" aria-expanded="false" data-i18n-attr="aria-label:menu.aria">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -691,54 +723,54 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="container hero-container">
     <div class="hero-content">
       <span class="hero-badge">
-        <img src="logo.png" alt="شهير">
-        الإصدار الأحدث
-        <i>· متوفر الحين</i>
+        <img src="logo.png" alt="شهير" data-i18n-attr="alt:brand.name">
+        <span data-i18n="hero.badge">الإصدار الأحدث</span>
+        <i data-i18n="hero.badgeNow">· متوفر الآن</i>
       </span>
-      <h1>
+      <h1 data-i18n="hero.title">
         كاشير أسرع.<br>
         <span class="accent">أرباح أوضح.</span>
       </h1>
-      <p class="hero-sub">
+      <p class="hero-sub" data-i18n="hero.sub">
         نظام <strong>«شهير»</strong> المحاسبي يمنحك شاشة بيع فورية، تقارير لحظية، وقاعدة بيانات آمنة — بكل سهولة ومن أي جهاز.
       </p>
       <div class="hero-actions">
         <a href="https://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe" class="btn btn-primary btn-lg" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-          حمّل النسخة الحين
+          <span data-i18n="hero.download">حمّل النسخة الآن</span>
         </a>
         <a href="#learn" class="btn btn-ghost-light btn-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z"/></svg>
-          شاهد النظام من الداخل
+          <span data-i18n="hero.tour">شاهد النظام من الداخل</span>
         </a>
       </div>
       <div class="hero-trust">
         <span class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-          بدون تعقيد
+          <span data-i18n="hero.trust1">بدون تعقيد</span>
         </span>
         <span class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 20h8"/><path d="M12 18v2"/></svg>
-          يشتغل على أي جهاز
+          <span data-i18n="hero.trust2">يعمل على أي جهاز</span>
         </span>
         <span class="trust-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.9z"/></svg>
-          دعم فني 24/7
+          <span data-i18n="hero.trust3">دعم فني 24/7</span>
         </span>
       </div>
     </div>
     <div class="hero-visual">
       <div class="hero-slider-wrap">
         <div class="hero-slider" id="heroSlider">
-          <div class="slide active"><img src="slid1.jpg" alt="شاشة نظام شهير 1"></div>
-          <div class="slide"><img src="slid2.jpg" alt="شاشة نظام شهير 2"></div>
-          <div class="slide"><img src="slid3.jpg" alt="شاشة نظام شهير 3"></div>
+          <div class="slide active"><img src="slid1.jpg" alt="شاشة نظام شهير 1" data-i18n-attr="alt:hero.slideAlt" data-i18n-n="1"></div>
+          <div class="slide"><img src="slid2.jpg" alt="شاشة نظام شهير 2" data-i18n-attr="alt:hero.slideAlt" data-i18n-n="2"></div>
+          <div class="slide"><img src="slid3.jpg" alt="شاشة نظام شهير 3" data-i18n-attr="alt:hero.slideAlt" data-i18n-n="3"></div>
         </div>
       </div>
-      <div class="hero-slider-dots" id="heroDots" role="tablist" aria-label="شرائح العرض">
-        <button class="active" aria-label="الشريحة الأولى"></button>
-        <button aria-label="الشريحة الثانية"></button>
-        <button aria-label="الشريحة الثالثة"></button>
+      <div class="hero-slider-dots" id="heroDots" role="tablist" aria-label="شرائح العرض" data-i18n-attr="aria-label:hero.slides">
+        <button class="active" aria-label="الشريحة الأولى" data-i18n-attr="aria-label:hero.slideBtn" data-i18n-n="1"></button>
+        <button aria-label="الشريحة الثانية" data-i18n-attr="aria-label:hero.slideBtn" data-i18n-n="2"></button>
+        <button aria-label="الشريحة الثالثة" data-i18n-attr="aria-label:hero.slideBtn" data-i18n-n="3"></button>
       </div>
     </div>
   </div>
@@ -747,16 +779,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <section class="section section-parallax" id="audience" style="background-image:url('so1.jpg')">
   <div class="container">
     <div class="sec-head reveal">
-      <img src="logo.png" alt="أيقونة شهير" class="sec-icon">
-      <span class="eyebrow">من نخدم؟</span>
-      <h2>مصمّم يلبّي طموحات الجميع.. <span>من نخدم؟</span></h2>
-      <p>مرونة ما لها حدود! سواء كنت تدير نشاط تجاري كبير وعندك فروع متعددة وتحتاج معالجة آلاف العمليات اللحظية، أو عندك مشروع صغير وتدور البساطة والتنظيم والسرعة في الإنجاز؛ «شهير» هو شريك نجاحك الأمثل اللي يكبر مع حجم شغلك.</p>
+      <img src="logo.png" alt="أيقونة شهير" data-i18n-attr="alt:icon.alt" class="sec-icon">
+      <span class="eyebrow" data-i18n="aud.eyebrow">من نخدم؟</span>
+      <h2 data-i18n="aud.title">مصمَّم ليلبّي طموحات الجميع.. <span>من نخدم؟</span></h2>
+      <p data-i18n="aud.desc">مرونة بلا حدود! سواء كنت تدير نشاطاً تجارياً كبيراً متعدد الفروع وتحتاج إلى معالجة آلاف العمليات اللحظية، أو تملك مشروعاً صغيراً وتبحث عن البساطة والتنظيم وسرعة الإنجاز؛ «شهير» هو شريك نجاحك الأمثل الذي ينمو مع حجم عملك.</p>
     </div>
     <div class="audience-grid">
-      <article class="aud-card reveal d1"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01"/></svg></div><h3>السلاسل والفروع المتعددة</h3><p>معالجة آلاف العمليات اللحظية وربط جميع فروعك في منظومة واحدة متكاملة.</p></article>
-      <article class="aud-card reveal d2"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.7l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.3L21.5 7H6"/><path d="M9 12h9"/></svg></div><h3>المتاجر والمحلات</h3><p>شاشة بيع سريعة مع بحث فوري وقارئ باركود لإتمام العملية في ثواني.</p></article>
-      <article class="aud-card reveal d3"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c0-4.4 3.6-8 8-8 0 4.4-3.6 8-8 8z"/><path d="M12 14c0-3.3-2.7-6-6-6 0 3.3 2.7 6 6 6z"/><path d="M8 22h8"/></svg></div><h3>المشاريع الصغيرة والناشئة</h3><p>ابدأ ببساطة وتنظيم، وكبّر مع «شهير» خطوة بخطوة مع نمو شغلك بدون تعقيد.</p></article>
-      <article class="aud-card reveal d4"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/><path d="M7.5 5.5 16.5 10"/></svg></div><h3>المستودعات ونقاط البيع</h3><p>مخزون دقيق، تقارير لحظية، وجرد سريع يعطيك سيطرة كاملة على حركة الأصناف.</p></article>
+      <article class="aud-card reveal d1"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21V9l9-6 9 6v12"/><path d="M3 21h18"/><path d="M9 21v-6h6v6"/><path d="M9 10h.01M15 10h.01"/></svg></div><h3 data-i18n="aud.c1.t">السلاسل والفروع المتعددة</h3><p data-i18n="aud.c1.d">معالجة آلاف العمليات اللحظية وربط جميع فروعك في منظومة واحدة متكاملة.</p></article>
+      <article class="aud-card reveal d2"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/><path d="M2.5 3h2.7l2.4 11.2a1.6 1.6 0 0 0 1.6 1.3h8.6a1.6 1.6 0 0 0 1.6-1.3L21.5 7H6"/><path d="M9 12h9"/></svg></div><h3 data-i18n="aud.c2.t">المتاجر والمحلات</h3><p data-i18n="aud.c2.d">شاشة بيع سريعة مع بحث فوري وقارئ باركود لإتمام العملية في ثوانٍ.</p></article>
+      <article class="aud-card reveal d3"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12"/><path d="M12 12c0-4.4 3.6-8 8-8 0 4.4-3.6 8-8 8z"/><path d="M12 14c0-3.3-2.7-6-6-6 0 3.3 2.7 6 6 6z"/><path d="M8 22h8"/></svg></div><h3 data-i18n="aud.c3.t">المشاريع الصغيرة والناشئة</h3><p data-i18n="aud.c3.d">ابدأ ببساطة وتنظيم، وتوسّع مع «شهير» خطوة بخطوة مع نمو عملك بدون تعقيد.</p></article>
+      <article class="aud-card reveal d4"><div class="aud-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/><path d="M12 13v8"/><path d="M7.5 5.5 16.5 10"/></svg></div><h3 data-i18n="aud.c4.t">المستودعات ونقاط البيع</h3><p data-i18n="aud.c4.d">مخزون دقيق، تقارير لحظية، وجرد سريع يمنحك سيطرة كاملة على حركة الأصناف.</p></article>
     </div>
   </div>
 </section>
@@ -764,17 +796,17 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <section class="section" id="features">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">ليه «شهير»؟</span>
-      <h2>مزايا <span>ما لها مثيل</span></h2>
-      <p>كل تفصيلة داخل النظام مصممة تعطيك سرعة، استقرار، وراحة في شغلك اليومي.</p>
+      <span class="eyebrow" data-i18n="feat.eyebrow">لماذا «شهير»؟</span>
+      <h2 data-i18n="feat.title">مزايا <span>لا مثيل لها</span></h2>
+      <p data-i18n="feat.desc">كل تفصيل داخل النظام مصمَّم ليمنحك السرعة والاستقرار والراحة في عملك اليومي.</p>
     </div>
     <div class="features-grid">
-      <article class="feature-card reveal d1"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div><h3>أداء صاروخي ولحظي</h3><p>سرعة استجابة فائقة وتنفيذ فوري للعمليات بدون أي تأخير، توفر وقتك ووقت عملائك.</p></article>
-      <article class="feature-card reveal d2"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20.5h8"/><path d="M12 16.5v4"/><path d="M6 8h6"/><path d="M6 11.5h3"/><circle cx="17" cy="10" r="2"/></svg></div><h3>شاشة بيع وعروض أسعار بضغطة زر</h3><p>أسرع شاشة نقاط بيع (POS) تتيح لك عرض الأسعار وإتمام البيع فوراً عبر البحث السريع أو قارئ الباركود.</p></article>
-      <article class="feature-card reveal d3"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3>نظام مستقل وذاتي المعمارية</h3><p>يعتمد النظام على أدواته الذاتية بالكامل من استخراج التقارير الدقيقة ونظام العرض، مما يضمن استقرار ما له مثيل.</p></article>
-      <article class="feature-card reveal d4"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="2"/><path d="M2 19h14"/><rect x="18" y="8" width="4" height="12" rx="1.5"/><path d="M18 20v1"/></svg></div><h3>يشتغل على جميع الأجهزة</h3><p>ما تحتاج تحدّث أجهزتك! «شهير» خفيف جداً ومتوافق كلياً يشتغل بأعلى كفاءة حتى على الأجهزة الضعيفة.</p></article>
-      <article class="feature-card reveal d5"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>قاعدة بيانات فولاذية الآمان</h3><p>بياناتك في أمان تام. قاعدة بيانات ثابتة ومستقرة تحمي معلوماتك حتى لو صار أي انهيار مفاجئ بنظام الويندوز.</p></article>
-      <article class="feature-card reveal d5"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/><circle cx="15.5" cy="15" r="1.5"/></svg></div><h3>واجهة مستخدم (UI) استثنائية</h3><p>تصميم عصري، بسيط، ومريح للعين، يتيح لأي مستخدم إتقان العمل على البرنامج في دقائق.</p></article>
+      <article class="feature-card reveal d1"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div><h3 data-i18n="feat.c1.t">أداء صاروخي ولحظي</h3><p data-i18n="feat.c1.d">سرعة استجابة فائقة وتنفيذ فوري للعمليات بدون أي تأخير، توفر وقتك ووقت عملائك.</p></article>
+      <article class="feature-card reveal d2"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="12.5" rx="2"/><path d="M8 20.5h8"/><path d="M12 16.5v4"/><path d="M6 8h6"/><path d="M6 11.5h3"/><circle cx="17" cy="10" r="2"/></svg></div><h3 data-i18n="feat.c2.t">شاشة بيع وعروض أسعار بضغطة زر</h3><p data-i18n="feat.c2.d">أسرع شاشة نقاط بيع (POS) تتيح لك عرض الأسعار وإتمام البيع فوراً عبر البحث السريع أو قارئ الباركود.</p></article>
+      <article class="feature-card reveal d3"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div><h3 data-i18n="feat.c3.t">نظام مستقل وذاتي المعمارية</h3><p data-i18n="feat.c3.d">يعتمد النظام على أدواته الذاتية بالكامل من استخراج التقارير الدقيقة ونظام العرض، مما يضمن استقراراً لا مثيل له.</p></article>
+      <article class="feature-card reveal d4"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="14" height="11" rx="2"/><path d="M2 19h14"/><rect x="18" y="8" width="4" height="12" rx="1.5"/><path d="M18 20v1"/></svg></div><h3 data-i18n="feat.c4.t">يعمل على جميع الأجهزة</h3><p data-i18n="feat.c4.d">لا تحتاج إلى تحديث أجهزتك! «شهير» خفيف جداً ومتوافق كلياً يعمل بأعلى كفاءة حتى على الأجهزة الضعيفة.</p></article>
+      <article class="feature-card reveal d5"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div><h3 data-i18n="feat.c5.t">قاعدة بيانات فولاذية الأمان</h3><p data-i18n="feat.c5.d">بياناتك في أمان تام. قاعدة بيانات ثابتة ومستقرة تحمي معلوماتك حتى لو حدث أي انهيار مفاجئ في نظام ويندوز.</p></article>
+      <article class="feature-card reveal d5"><div class="f-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18"/><path d="M9 21V9"/><circle cx="15.5" cy="15" r="1.5"/></svg></div><h3 data-i18n="feat.c6.t">واجهة مستخدم (UI) استثنائية</h3><p data-i18n="feat.c6.d">تصميم عصري، بسيط، ومريح للعين، يتيح لأي مستخدم إتقان العمل على البرنامج في دقائق.</p></article>
     </div>
   </div>
 </section>
@@ -782,18 +814,18 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <section class="section section-parallax" id="learn" style="background-image:url('so2.jpg')">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">تعرّف · جولة داخل النظام</span>
-      <h2>شاهد «شهير» <span>من الداخل</span></h2>
-      <p>لمحة سريعة عن شاشات النظام: البيع، المخزون، التقارير، والعملاء.. صور كاملة بدون قطع. اضغط على أي صورة لعرضها بالحجم الكامل.</p>
+      <span class="eyebrow" data-i18n="learn.eyebrow">تعرّف · جولة داخل النظام</span>
+      <h2 data-i18n="learn.title">شاهد «شهير» <span>من الداخل</span></h2>
+      <p data-i18n="learn.desc">لمحة سريعة عن شاشات النظام: البيع، المخزون، التقارير، والعملاء.. صور كاملة بدون قطع. اضغط على أي صورة لعرضها بالحجم الكامل.</p>
     </div>
     <div class="shots-grid" id="shotsGrid">
-      <div class="shot reveal d1"><img src="1.png" alt="شاشة 1 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 1</span></div>
-      <div class="shot reveal d1"><img src="2.png" alt="شاشة 2 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 2</span></div>
-      <div class="shot reveal d2"><img src="3.png" alt="شاشة 3 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 3</span></div>
-      <div class="shot reveal d2"><img src="4.png" alt="شاشة 4 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 4</span></div>
-      <div class="shot reveal d3"><img src="5.png" alt="شاشة 5 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 5</span></div>
-      <div class="shot reveal d3"><img src="6.png" alt="شاشة 6 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 6</span></div>
-      <div class="shot reveal d4"><img src="7.png" alt="شاشة 7 - نظام شهير" loading="lazy"><span class="shot-tag">شاشة النظام 7</span></div>
+      <div class="shot reveal d1"><img src="1.png" alt="شاشة 1 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="1"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="1">شاشة النظام 1</span></div>
+      <div class="shot reveal d1"><img src="2.png" alt="شاشة 2 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="2"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="2">شاشة النظام 2</span></div>
+      <div class="shot reveal d2"><img src="3.png" alt="شاشة 3 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="3"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="3">شاشة النظام 3</span></div>
+      <div class="shot reveal d2"><img src="4.png" alt="شاشة 4 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="4"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="4">شاشة النظام 4</span></div>
+      <div class="shot reveal d3"><img src="5.png" alt="شاشة 5 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="5"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="5">شاشة النظام 5</span></div>
+      <div class="shot reveal d3"><img src="6.png" alt="شاشة 6 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="6"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="6">شاشة النظام 6</span></div>
+      <div class="shot reveal d4"><img src="7.png" alt="شاشة 7 - نظام شهير" loading="lazy" data-i18n-attr="alt:shot.alt" data-i18n-n="7"><span class="shot-tag" data-i18n="shot.tag" data-i18n-n="7">شاشة النظام 7</span></div>
     </div>
   </div>
 </section>
@@ -802,59 +834,59 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="container">
     <div class="download-band reveal">
       <div class="dl-right">
-        <img src="logo.png" alt="أيقونة نظام شهير" class="dl-icon">
+        <img src="logo.png" alt="أيقونة نظام شهير" data-i18n-attr="alt:icon.alt" class="dl-icon">
         <div>
-          <h2>حمّل نسخة «شهير» الحين</h2>
-          <p>نسخة كاملة جاهزة للتثبيت على جميع إصدارات ويندوز — ابدأ فوراً بعد التثبيت.</p>
+          <h2 data-i18n="dl.title">حمّل نسخة «شهير» الآن</h2>
+          <p data-i18n="dl.desc">نسخة كاملة جاهزة للتثبيت على جميع إصدارات ويندوز — ابدأ فوراً بعد التثبيت.</p>
         </div>
       </div>
       <div class="dl-actions">
         <a href="https://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe" class="btn btn-white btn-lg" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-          تحميل النسخة (exe)
+          <span data-i18n="dl.btn">تحميل النسخة (exe)</span>
         </a>
         <a href="#installSteps" class="btn btn-ghost-light btn-lg">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-          دليل التثبيت
+          <span data-i18n="dl.guide">دليل التثبيت</span>
         </a>
       </div>
     </div>
 
     <div class="install-section" id="installSteps">
       <div class="sec-head reveal">
-        <span class="eyebrow">دليل التثبيت المصور</span>
-        <h2>ثبّت «شهير» في <span>3 خطوات سهلة</span></h2>
-        <p>اتبع الخطوات التالية بالترتيب لتثبيت البرنامج على جهازك خلال دقائق، بدون أي خبرة تقنية.</p>
+        <span class="eyebrow" data-i18n="inst.eyebrow">دليل التثبيت المصور</span>
+        <h2 data-i18n="inst.title">ثبّت «شهير» في <span>3 خطوات سهلة</span></h2>
+        <p data-i18n="inst.desc">اتبع الخطوات التالية بالترتيب لتثبيت البرنامج على جهازك خلال دقائق، بدون أي خبرة تقنية.</p>
       </div>
       <div class="install-steps">
         <article class="step-card reveal d1">
           <span class="step-num">1</span>
-          <div class="step-img"><img src="sp1.png" alt="خطوة 1 - تحميل النظام" loading="lazy"></div>
-          <h3>حمّل النظام من الموقع</h3>
-          <p>اضغط على زر <strong>«تحميل النسخة (exe)»</strong> بالأعلى لتنزيل ملف التثبيت <strong>FamousPOS-win-Setup.exe</strong> على جهازك مباشرة، وانتظر لين يكتمل التنزيل.</p>
-          <span class="step-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>حمّل ملف التثبيت</span>
+          <div class="step-img"><img src="sp1.png" alt="خطوة 1 - تحميل النظام" data-i18n-attr="alt:inst.s1.alt" loading="lazy"></div>
+          <h3 data-i18n="inst.s1.t">حمّل النظام من الموقع</h3>
+          <p data-i18n="inst.s1.d">اضغط على زر <strong>«تحميل النسخة (exe)»</strong> بالأعلى لتنزيل ملف التثبيت <strong>FamousPOS-win-Setup.exe</strong> على جهازك مباشرة، وانتظر حتى يكتمل التنزيل.</p>
+          <span class="step-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg><span data-i18n="inst.s1.h">حمّل ملف التثبيت</span></span>
         </article>
         <article class="step-card reveal d2">
           <span class="step-num">2</span>
-          <div class="step-img"><img src="sp2.png" alt="خطوة 2 - التثبيت المباشر" loading="lazy"></div>
-          <h3>اضغط على ملف التثبيت</h3>
-          <p>بمجرد الضغط على ملف <strong>FamousPOS-win-Setup.exe</strong> بالنقر المزدوج عليه، يبدأ البرنامج بالتثبيت <strong>مباشرة وتلقائياً</strong> على جهازك بدون أي خطوات إضافية.</p>
-          <span class="step-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>التثبيت يبدأ تلقائياً</span>
+          <div class="step-img"><img src="sp2.png" alt="خطوة 2 - التثبيت المباشر" data-i18n-attr="alt:inst.s2.alt" loading="lazy"></div>
+          <h3 data-i18n="inst.s2.t">اضغط على ملف التثبيت</h3>
+          <p data-i18n="inst.s2.d">بمجرد الضغط على ملف <strong>FamousPOS-win-Setup.exe</strong> بالنقر المزدوج عليه، يبدأ البرنامج بالتثبيت <strong>مباشرة وتلقائياً</strong> على جهازك بدون أي خطوات إضافية.</p>
+          <span class="step-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="inst.s2.h">التثبيت يبدأ تلقائياً</span></span>
         </article>
         <article class="step-card reveal d3">
           <span class="step-num">3</span>
-          <div class="step-img"><img src="sp3.png" alt="خطوة 3 - الإعداد الأولى" loading="lazy"></div>
-          <h3>الإعداد الأولى وإدخال البيانات</h3>
-          <p>بعد ما يخلص التثبيت، بيفتح معك البرنامج مباشرة وتدخل بياناتك الأساسية وتبدأ الإعداد الأولى للنظام بكل سهولة. مبروك! تقدر الحين تبدأ العمل.</p>
-          <span class="step-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>ابدأ إعداد نظامك</span>
+          <div class="step-img"><img src="sp3.png" alt="خطوة 3 - الإعداد الأولي" data-i18n-attr="alt:inst.s3.alt" loading="lazy"></div>
+          <h3 data-i18n="inst.s3.t">الإعداد الأولي وإدخال البيانات</h3>
+          <p data-i18n="inst.s3.d">بعد اكتمال التثبيت، يفتح البرنامج مباشرة لتُدخل بياناتك الأساسية وتبدأ الإعداد الأولي للنظام بكل سهولة. مبارك! يمكنك الآن بدء العمل.</p>
+          <span class="step-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg><span data-i18n="inst.s3.h">ابدأ إعداد نظامك</span></span>
         </article>
       </div>
 
       <div class="install-note reveal">
-        <img src="logo.png" alt="أيقونة شهير">
+        <img src="logo.png" alt="أيقونة شهير" data-i18n-attr="alt:icon.alt">
         <div>
-          <h4>نصيحة سريعة</h4>
-          <p>إذا واجهتك أي مشكلة أثناء التثبيت، تواصل مع فريق الدعم الفني مباشرة على الرقم <strong>0553183438</strong> وبنساعدك خطوة بخطوة لين يشتغل البرنامج بنجاح.</p>
+          <h4 data-i18n="inst.note.t">نصيحة سريعة</h4>
+          <p data-i18n="inst.note.d">إذا واجهتك أي مشكلة أثناء التثبيت، تواصل مع فريق الدعم الفني مباشرة على الرقم <strong>0553183438</strong> وسنساعدك خطوة بخطوة حتى يعمل البرنامج بنجاح.</p>
         </div>
       </div>
     </div>
@@ -864,14 +896,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <section class="section section-parallax" id="support" style="background-image:url('so3.jpg')">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">الدعم الفني</span>
-      <h2>إحنا معك دايماً.. <span>دعم فني ما يوقف!</span></h2>
-      <p>لأن استمرارية شغلك هي أولويتنا، وفرنا لك فريق دعم فني احترافي متاح على مدار الساعة للرد على استفساراتك وحل أي عقبة تقنية تواجهك في لمح البصر.</p>
+      <span class="eyebrow" data-i18n="sup.eyebrow">الدعم الفني</span>
+      <h2 data-i18n="sup.title">نحن معك دائماً.. <span>دعم فني لا يتوقف!</span></h2>
+      <p data-i18n="sup.desc">لأن استمرارية عملك هي أولويتنا، وفّرنا لك فريق دعم فني احترافي متاح على مدار الساعة للرد على استفساراتك وحل أي عقبة تقنية تواجهك في لمح البصر.</p>
     </div>
     <div class="support-grid">
-      <article class="support-card reveal d1"><div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><h3>اتصال مباشر</h3><p>كلّم مهندس الدعم الفني فوراً خلال ساعات العمل.</p><a class="support-link" href="tel:+966553183438">0553183438</a></article>
-      <article class="support-card reveal d2"><div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.9z"/><path d="M8.5 10.5c.4 1 1 1.8 1.9 2.4"/></svg></div><h3>واتساب الدعم</h3><p>أرسل رسالتك أو صورتك وبيتم الرد عليك بأسرع وقت.</p><a class="support-link" href="https://wa.me/966553183438" target="_blank" rel="noopener">0553183438</a></article>
-      <article class="support-card reveal d3"><div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div><h3>دعم على مدار الساعة</h3><p>فريقنا متاح 24/7 لضمان استمرارية شغلك بدون توقف.</p><span class="support-link" style="cursor:default">24 / 7</span></article>
+      <article class="support-card reveal d1"><div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><h3 data-i18n="sup.c1.t">اتصال مباشر</h3><p data-i18n="sup.c1.d">تحدّث مع مهندس الدعم الفني فوراً خلال ساعات العمل.</p><a class="support-link" href="tel:+966553183438">0553183438</a></article>
+      <article class="support-card reveal d2"><div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.9z"/><path d="M8.5 10.5c.4 1 1 1.8 1.9 2.4"/></svg></div><h3 data-i18n="sup.c2.t">واتساب الدعم</h3><p data-i18n="sup.c2.d">أرسل رسالتك أو صورتك وسيتم الرد عليك في أسرع وقت.</p><a class="support-link" href="https://wa.me/966553183438" target="_blank" rel="noopener">0553183438</a></article>
+      <article class="support-card reveal d3"><div class="support-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg></div><h3 data-i18n="sup.c3.t">دعم على مدار الساعة</h3><p data-i18n="sup.c3.d">فريقنا متاح 24/7 لضمان استمرارية عملك بدون توقف.</p><span class="support-link" style="cursor:default">24 / 7</span></article>
     </div>
   </div>
 </section>
@@ -880,9 +912,9 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <section class="section" id="location">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">موقعنا</span>
-      <h2>زورونا في <span>معرضنا</span></h2>
-      <p>تفضلوا بزيارتنا في موقعنا على الخريطة، فريقنا في خدمتكم دائماً.</p>
+      <span class="eyebrow" data-i18n="loc.eyebrow">موقعنا</span>
+      <h2 data-i18n="loc.title">زورونا في <span>معرضنا</span></h2>
+      <p data-i18n="loc.desc">تفضلوا بزيارتنا في موقعنا على الخريطة، فريقنا في خدمتكم دائماً.</p>
     </div>
     <div class="map-container reveal">
       <iframe 
@@ -893,8 +925,14 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         allowfullscreen="" 
         loading="lazy" 
         referrerpolicy="no-referrer-when-downgrade"
-        title="موقع شهير للحاسبات على الخريطة">
+        title="موقع شهير للحاسبات على الخريطة" data-i18n-attr="title:loc.mapTitle;src:loc.mapSrc">
       </iframe>
+    </div>
+    <div class="hero-actions reveal" style="justify-content:center;margin:26px 0 0">
+      <a href="https://maps.app.goo.gl/gTkDPGX6egFwkDDb9" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+        <span data-i18n="loc.btn">افتح الموقع في خرائط Google</span>
+      </a>
     </div>
   </div>
 </section>
@@ -902,29 +940,29 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 <section class="section developer-section" id="developer">
   <div class="container">
     <div class="sec-head reveal">
-      <span class="eyebrow">عن المطوّر</span>
-      <h2>تعرّف على <span>مطوّر «شهير»</span></h2>
-      <p>برنامج شهير المحاسبي من تطوير مبرمج سعودي محترف، بخبرة طويلة في أنظمة نقاط البيع والمحاسبة.</p>
+      <span class="eyebrow" data-i18n="dev.eyebrow">عن المطوّر</span>
+      <h2 data-i18n="dev.title">تعرّف على <span>مطوّر «شهير»</span></h2>
+      <p data-i18n="dev.desc">برنامج شهير المحاسبي من تطوير مبرمج محترف، بخبرة طويلة في أنظمة نقاط البيع والمحاسبة.</p>
     </div>
     <div class="dev-box reveal">
       <div class="dev-photo">
-        <img src="my.png" alt="محمد زيدان - مطوّر نظام شهير">
+        <img src="my.png" alt="محمد زاهد - مطوّر نظام شهير" data-i18n-attr="alt:dev.photoAlt">
       </div>
       <div class="dev-info">
         <span class="dev-role">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          مطوّر البرنامج
+          <span data-i18n="dev.role">مطوّر البرنامج</span>
         </span>
-        <h3>محمد <span>زيدان</span></h3>
-        <p>مبرمج ومطوّر أنظمة محاسبية ونقاط بيع، صاحب فكرة وبرمجة نظام «شهير» المحاسبي. خبرة طويلة في بناء حلول برمجية سريعة، مستقرة، وآمنة تناسب السوق السعودي. يهدف دائماً لتقديم أفضل تجربة استخدام ممكنة لأصحاب المتاجر والمشاريع.</p>
+        <h3 data-i18n="dev.name">محمد <span>زاهد</span></h3>
+        <p data-i18n="dev.bio">مبرمج ومطوّر أنظمة محاسبية ونقاط بيع، صاحب فكرة وبرمجة نظام «شهير» المحاسبي. خبرة طويلة في بناء حلول برمجية سريعة، مستقرة، وآمنة تناسب السوق السعودي. يهدف دائماً لتقديم أفضل تجربة استخدام ممكنة لأصحاب المتاجر والمشاريع.</p>
         <div class="dev-contacts">
           <a href="tel:+966553183438" class="dev-contact-btn call">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
             0553183438
           </a>
-          <a href="https://wa.me/966553183438?text=مرحباً%20م.%20محمد%20زيدان،%20أحتاج%20استفسار%20عن%20نظام%20شهير" target="_blank" rel="noopener" class="dev-contact-btn wa">
+          <a href="https://wa.me/966553183438?text=مرحباً%20م.%20محمد%20زاهد،%20لديّ%20استفسار%20عن%20نظام%20شهير" target="_blank" rel="noopener" class="dev-contact-btn wa" data-i18n-attr="href:dev.waHref">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
-            واتساب المطوّر
+            <span data-i18n="dev.wa">واتساب المطوّر</span>
           </a>
         </div>
       </div>
@@ -934,16 +972,16 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 
 <section class="final-cta">
   <div class="container">
-    <img src="logo.png" alt="أيقونة نظام شهير" class="cta-icon reveal">
-    <h2 class="reveal d1">جاهز تنقل مبيعاتك لمستوى «السرعة الصاروخية»؟</h2>
+    <img src="logo.png" alt="أيقونة نظام شهير" data-i18n-attr="alt:icon.alt" class="cta-icon reveal">
+    <h2 class="reveal d1" data-i18n="cta.title">هل أنت جاهز لنقل مبيعاتك إلى مستوى «السرعة الصاروخية»؟</h2>
     <div class="hero-actions reveal d2">
       <a href="https://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe" class="btn btn-white btn-lg" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
-        حمّل نسختك الحين
+        <span data-i18n="cta.download">حمّل نسختك الآن</span>
       </a>
       <a href="https://wa.me/966553183438" target="_blank" rel="noopener" class="btn btn-ghost-light btn-lg">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.9z"/></svg>
-        تواصل مع المبيعات
+        <span data-i18n="cta.sales">تواصل مع المبيعات</span>
       </a>
     </div>
   </div>
@@ -955,75 +993,75 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <div class="footer-brand"><img src="logo.png" alt="شعار نظام شهير"><div><strong>شهير</strong><small>نظام كاشير محاسبي احترافي</small></div></div>
-        <p>نظام كاشير محاسبي متكامل مبني على أحدث معمارية برمجية، يعطيك أداءً صاروخياً، تقارير دقيقة، وقاعدة بيانات فولاذية الآمان.. ويشتغل بكفاءة على جميع الأجهزة.</p>
+        <div class="footer-brand"><img src="logo.png" alt="شعار نظام شهير" data-i18n-attr="alt:logo.alt"><div><strong data-i18n="brand.name">شهير</strong><small data-i18n="footer.tagline">نظام كاشير محاسبي احترافي</small></div></div>
+        <p data-i18n="footer.about">نظام كاشير محاسبي متكامل مبني على أحدث معمارية برمجية، يمنحك أداءً صاروخياً، تقارير دقيقة، وقاعدة بيانات فولاذية الأمان.. ويعمل بكفاءة على جميع الأجهزة.</p>
       </div>
       <div class="footer-col">
-        <h4>روابط سريعة</h4>
+        <h4 data-i18n="footer.h.links">روابط سريعة</h4>
         <div class="footer-links">
-          <a href="#download">تحميل البرنامج</a>
-          <a href="#installSteps">دليل التثبيت المصور</a>
-          <a href="#learn">تعرّف (شروحات البرنامج)</a>
-          <a href="#location">الموقع على الخريطة</a>
-          <a href="#developer">عن المطوّر</a>
+          <a href="#download" data-i18n="footer.l.download">تحميل البرنامج</a>
+          <a href="#installSteps" data-i18n="footer.l.guide">دليل التثبيت المصور</a>
+          <a href="#learn" data-i18n="footer.l.learn">تعرّف (شروحات البرنامج)</a>
+          <a href="#location" data-i18n="footer.l.location">الموقع على الخريطة</a>
+          <a href="#developer" data-i18n="footer.l.developer">عن المطوّر</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>أقسام الموقع</h4>
+        <h4 data-i18n="footer.h.sections">أقسام الموقع</h4>
         <div class="footer-links">
-          <a href="#home">الرئيسية</a>
-          <a href="#audience">من نخدم؟</a>
-          <a href="#features">مزايا النظام</a>
-          <a href="#support">الدعم الفني</a>
+          <a href="#home" data-i18n="footer.l.home">الرئيسية</a>
+          <a href="#audience" data-i18n="footer.l.audience">من نخدم؟</a>
+          <a href="#features" data-i18n="footer.l.features">مزايا النظام</a>
+          <a href="#support" data-i18n="footer.l.support">الدعم الفني</a>
         </div>
       </div>
       <div class="footer-col">
-        <h4>تواصل معنا</h4>
+        <h4 data-i18n="footer.h.contact">تواصل معنا</h4>
         <ul class="footer-contact">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><a href="tel:+966553183438">0553183438</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.9z"/></svg><a href="https://wa.me/966553183438" target="_blank" rel="noopener">واتساب الدعم الفني</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg>دعم فني على مدار الساعة</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.9 8.9 0 0 1-3.8-.8L3 21l1.9-5a8.4 8.4 0 0 1-.9-4 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.9z"/></svg><a href="https://wa.me/966553183438" target="_blank" rel="noopener" data-i18n="footer.wa">واتساب الدعم الفني</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.2 2"/></svg><span data-i18n="footer.247">دعم فني على مدار الساعة</span></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="dev">تطوير المبرمج <span>محمد زيدان</span> — جميع الحقوق محفوظة</p>
-      <p class="copy">© 2027 نظام شهير المحاسبي. جميع الحقوق محفوظة.</p>
+      <p class="dev" data-i18n="footer.dev">تطوير المبرمج <span>محمد زاهد</span> — جميع الحقوق محفوظة</p>
+      <p class="copy" data-i18n="footer.copy">© 2027 نظام شهير المحاسبي. جميع الحقوق محفوظة.</p>
     </div>
   </div>
 </footer>
 
-<button class="to-top" id="toTop" aria-label="العودة للأعلى">
+<button class="to-top" id="toTop" aria-label="العودة للأعلى" data-i18n-attr="aria-label:top.aria">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
 </button>
 
 <a class="whatsapp-float"
-   href="https://wa.me/966553183438?text=مرحباً%20فريق%20شهير،%20أبغى%20أستفسر%20عن%20نظام%20الكاشير%20المحاسبي"
-   target="_blank" rel="noopener" aria-label="تواصل عبر واتساب">
-  <span class="wa-tip">تواصل عبر واتساب</span>
+   href="https://wa.me/966553183438?text=مرحباً%20فريق%20شهير،%20أودّ%20الاستفسار%20عن%20نظام%20الكاشير%20المحاسبي"
+   target="_blank" rel="noopener" aria-label="تواصل عبر واتساب" data-i18n-attr="aria-label:wa.tip;href:wa.href">
+  <span class="wa-tip" data-i18n="wa.tip">تواصل عبر واتساب</span>
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/>
   </svg>
 </a>
 
-<button class="chat-float" id="chatToggle" aria-label="محادثة شهير الذكية">
-  <span class="chat-tip">محادثة شهير الذكية</span>
+<button class="chat-float" id="chatToggle" aria-label="محادثة شهير الذكية" data-i18n-attr="aria-label:chat.title">
+  <span class="chat-tip" data-i18n="chat.title">محادثة شهير الذكية</span>
   <span class="chat-badge">1</span>
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
   </svg>
 </button>
 
-<div class="chat-window" id="chatWindow" role="dialog" aria-label="محادثة شهير الذكية">
+<div class="chat-window" id="chatWindow" role="dialog" aria-label="محادثة شهير الذكية" data-i18n-attr="aria-label:chat.title">
   <div class="chat-header">
     <div class="chat-header-info">
-      <img src="logo.png" alt="شهير">
+      <img src="logo.png" alt="شهير" data-i18n-attr="alt:brand.name">
       <div>
-        <strong>محادثة شهير الذكية</strong>
-        <small><span class="online-dot"></span> متصل الحين · يرد فوراً</small>
+        <strong data-i18n="chat.title">محادثة شهير الذكية</strong>
+        <small data-i18n="chat.status"><span class="online-dot"></span> متصل الآن · يرد فوراً</small>
       </div>
     </div>
-    <button class="chat-close" id="chatClose" aria-label="إغلاق">
+    <button class="chat-close" id="chatClose" aria-label="إغلاق" data-i18n-attr="aria-label:common.close">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
     </button>
   </div>
@@ -1032,29 +1070,235 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   <div class="chat-quick" id="chatQuick"></div>
 
   <form class="chat-input" id="chatForm">
-    <input type="text" id="chatInput" placeholder="اكتب سؤالك هنا..." autocomplete="off">
-    <button type="submit" aria-label="إرسال">
+    <input type="text" id="chatInput" placeholder="اكتب سؤالك هنا..." data-i18n-attr="placeholder:chat.placeholder" autocomplete="off">
+    <button type="submit" aria-label="إرسال" data-i18n-attr="aria-label:chat.send">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
     </button>
   </form>
 </div>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة">
-  <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="عرض الصورة" data-i18n-attr="aria-label:lightbox.aria">
+  <button class="lightbox-close" id="lightboxClose" aria-label="إغلاق" data-i18n-attr="aria-label:common.close">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
   </button>
-  <img src="" alt="صورة من داخل النظام" id="lightboxImg">
+  <img src="" alt="صورة من داخل النظام" data-i18n-attr="alt:lightbox.alt" id="lightboxImg">
 </div>
 
 <script>
 /* ==========================================================
+   اللغة: العربية (الافتراضية) / English
+   النص العربي يبقى في الصفحة نفسها، والترجمة الإنجليزية في I18N_EN.
+   العنصر المترجَم يحمل data-i18n (للنص) أو data-i18n-attr (للخصائص).
+========================================================== */
+const I18N_EN = {
+  "meta.title": "Famous POS | Professional POS & Accounting System",
+  "meta.description": "Famous POS is a professional point-of-sale and accounting system with blazing-fast performance, an instant sales screen, accurate reports, and a secure database. Developed by Mohammed Zahed.",
+  "brand.name": "Famous POS",
+  "brand.aria": "Famous POS – Home",
+  "logo.alt": "Famous POS logo",
+  "icon.alt": "Famous POS icon",
+  "common.close": "Close",
+  "nav.aria": "Main menu",
+  "nav.home": "Home",
+  "nav.download": "Download",
+  "nav.learn": "Tour",
+  "nav.support": "Support",
+  "nav.location": "Location",
+  "nav.developer": "Developer",
+  "menu.aria": "Open menu",
+  "hero.badge": "Latest release",
+  "hero.badgeNow": "· Available now",
+  "hero.title": "Faster checkout.<br><span class=\"accent\">Clearer profits.</span>",
+  "hero.sub": "The <strong>Famous POS</strong> accounting system gives you an instant sales screen, real-time reports, and a secure database — effortlessly, on any device.",
+  "hero.download": "Download now",
+  "hero.tour": "Take a look inside",
+  "hero.trust1": "Hassle-free",
+  "hero.trust2": "Runs on any device",
+  "hero.trust3": "24/7 technical support",
+  "hero.slideAlt": "Famous POS screen {n}",
+  "hero.slides": "Slides",
+  "hero.slideBtn": "Slide {n}",
+  "aud.eyebrow": "Who we serve",
+  "aud.title": "Built for every ambition. <span>Who do we serve?</span>",
+  "aud.desc": "Limitless flexibility! Whether you run a large, multi-branch business that processes thousands of real-time transactions, or a small venture looking for simplicity, organization, and speed, Famous POS is the ideal partner that grows with your business.",
+  "aud.c1.t": "Chains & multi-branch businesses",
+  "aud.c1.d": "Process thousands of real-time transactions and connect all your branches in one integrated system.",
+  "aud.c2.t": "Stores & retail shops",
+  "aud.c2.d": "A fast sales screen with instant search and barcode scanning to complete every sale in seconds.",
+  "aud.c3.t": "Small businesses & startups",
+  "aud.c3.d": "Start simple and organized, then scale with Famous POS step by step as your business grows — without the complexity.",
+  "aud.c4.t": "Warehouses & points of sale",
+  "aud.c4.d": "Accurate inventory, real-time reports, and fast stock counts give you full control over item movement.",
+  "feat.eyebrow": "Why Famous POS?",
+  "feat.title": "Features <span>like no other</span>",
+  "feat.desc": "Every detail of the system is designed to give you speed, stability, and ease in your daily work.",
+  "feat.c1.t": "Blazing-fast, real-time performance",
+  "feat.c1.d": "Ultra-fast response and instant processing with zero lag, saving time for you and your customers.",
+  "feat.c2.t": "Sales and quotations at the click of a button",
+  "feat.c2.d": "The fastest point-of-sale (POS) screen lets you look up prices and complete a sale instantly using quick search or a barcode scanner.",
+  "feat.c3.t": "Standalone, self-contained architecture",
+  "feat.c3.d": "The system relies entirely on its own built-in tools — from generating precise reports to its display engine — ensuring unmatched stability.",
+  "feat.c4.t": "Runs on all devices",
+  "feat.c4.d": "No need to upgrade your hardware! Famous POS is extremely lightweight and fully compatible, running at peak efficiency even on low-spec machines.",
+  "feat.c5.t": "Rock-solid database security",
+  "feat.c5.d": "Your data is completely safe. A robust, stable database protects your information even if Windows crashes unexpectedly.",
+  "feat.c6.t": "An exceptional user interface (UI)",
+  "feat.c6.d": "A modern, clean design that is easy on the eyes and lets any user master the software in minutes.",
+  "learn.eyebrow": "Tour · Inside the system",
+  "learn.title": "See Famous POS <span>from the inside</span>",
+  "learn.desc": "A quick look at the system's screens: sales, inventory, reports, and customers — full, uncropped screenshots. Click any image to view it at full size.",
+  "shot.alt": "Screen {n} – Famous POS",
+  "shot.tag": "System screen {n}",
+  "dl.title": "Download Famous POS now",
+  "dl.desc": "A full version, ready to install on all versions of Windows — get started right after installation.",
+  "dl.btn": "Download installer (.exe)",
+  "dl.guide": "Installation guide",
+  "inst.eyebrow": "Illustrated installation guide",
+  "inst.title": "Install Famous POS in <span>3 easy steps</span>",
+  "inst.desc": "Follow these steps in order to install the software on your device within minutes — no technical experience needed.",
+  "inst.s1.alt": "Step 1 – Download the system",
+  "inst.s1.t": "Download the system from the website",
+  "inst.s1.d": "Click the <strong>“Download installer (.exe)”</strong> button above to download the setup file <strong>FamousPOS-win-Setup.exe</strong> straight to your device, then wait for the download to finish.",
+  "inst.s1.h": "Download the setup file",
+  "inst.s2.alt": "Step 2 – Direct installation",
+  "inst.s2.t": "Run the setup file",
+  "inst.s2.d": "As soon as you double-click <strong>FamousPOS-win-Setup.exe</strong>, the software installs <strong>immediately and automatically</strong> on your device, with no extra steps.",
+  "inst.s2.h": "Installation starts automatically",
+  "inst.s3.alt": "Step 3 – Initial setup",
+  "inst.s3.t": "Initial setup and data entry",
+  "inst.s3.d": "Once installation is complete, the software opens right away so you can enter your basic details and complete the initial setup with ease. Congratulations — you're ready to start working!",
+  "inst.s3.h": "Start setting up your system",
+  "inst.note.t": "Quick tip",
+  "inst.note.d": "If you run into any issue during installation, contact our technical support team directly on <strong>0553183438</strong> and we'll guide you step by step until the software is up and running.",
+  "sup.eyebrow": "Technical support",
+  "sup.title": "Always by your side. <span>Support that never stops!</span>",
+  "sup.desc": "Because keeping your business running is our priority, we have a professional technical support team available around the clock to answer your questions and resolve any technical obstacle in no time.",
+  "sup.c1.t": "Direct call",
+  "sup.c1.d": "Speak with a technical support engineer right away during business hours.",
+  "sup.c2.t": "WhatsApp support",
+  "sup.c2.d": "Send us a message or a screenshot and we'll get back to you as soon as possible.",
+  "sup.c3.t": "Round-the-clock support",
+  "sup.c3.d": "Our team is available 24/7 to keep your business running without interruption.",
+  "loc.eyebrow": "Our location",
+  "loc.title": "Visit us at <span>our showroom</span>",
+  "loc.desc": "You're welcome to visit us at our location on the map — our team is always at your service.",
+  "loc.mapTitle": "Our location on the map",
+  "loc.btn": "Open in Google Maps",
+  "dev.eyebrow": "About the developer",
+  "dev.title": "Meet <span>the developer of Famous POS</span>",
+  "dev.desc": "Famous POS is developed by a professional programmer with long-standing experience in point-of-sale and accounting systems.",
+  "dev.photoAlt": "Mohammed Zahed – developer of Famous POS",
+  "dev.role": "Software developer",
+  "dev.name": "Mohammed <span>Zahed</span>",
+  "dev.bio": "A programmer and developer of accounting and point-of-sale systems, and the mind behind the concept and code of Famous POS. He brings long-standing experience in building fast, stable, and secure software solutions tailored to the Saudi market, and always aims to deliver the best possible user experience for store and business owners.",
+  "dev.wa": "WhatsApp the developer",
+  "dev.waHref": "https://wa.me/966553183438?text=Hello%20Eng.%20Mohammed%20Zahed%2C%20I%20have%20an%20inquiry%20about%20Famous%20POS",
+  "cta.title": "Ready to take your sales to “rocket speed”?",
+  "cta.download": "Download your copy now",
+  "cta.sales": "Contact sales",
+  "footer.tagline": "Professional POS & accounting system",
+  "footer.about": "A complete POS and accounting system built on the latest software architecture, giving you blazing-fast performance, accurate reports, and a rock-solid secure database — and it runs efficiently on all devices.",
+  "footer.h.links": "Quick links",
+  "footer.l.download": "Download the software",
+  "footer.l.guide": "Illustrated installation guide",
+  "footer.l.learn": "Tour (software walkthrough)",
+  "footer.l.location": "Location on the map",
+  "footer.l.developer": "About the developer",
+  "footer.h.sections": "Site sections",
+  "footer.l.home": "Home",
+  "footer.l.audience": "Who we serve",
+  "footer.l.features": "System features",
+  "footer.l.support": "Technical support",
+  "footer.h.contact": "Contact us",
+  "footer.wa": "WhatsApp technical support",
+  "footer.247": "Round-the-clock technical support",
+  "footer.dev": "Developed by <span>Mohammed Zahed</span> — All rights reserved",
+  "footer.copy": "© 2027 Famous POS Accounting System. All rights reserved.",
+  "top.aria": "Back to top",
+  "wa.tip": "Chat on WhatsApp",
+  "wa.href": "https://wa.me/966553183438?text=Hello%20Famous%20POS%20team%2C%20I%27d%20like%20to%20ask%20about%20the%20POS%20and%20accounting%20system",
+  "chat.title": "Famous POS Smart Chat",
+  "chat.status": "<span class=\"online-dot\"></span> Online now · Replies instantly",
+  "chat.placeholder": "Type your question here...",
+  "chat.send": "Send",
+  "lightbox.aria": "Image viewer",
+  "lightbox.alt": "Screenshot from inside the system",
+  "loc.mapSrc": "https://maps.google.com/maps?q=شهير%20للحاسبات&t=&z=15&ie=UTF8&iwloc=&output=embed&hl=en"
+};
+
+let currentLang = 'ar';
+const L = (ar, en) => (currentLang === 'en' ? en : ar);
+
+const i18nOriginals   = new WeakMap();
+const metaDescription = document.querySelector('meta[name="description"]');
+const AR_META = { title: document.title, description: metaDescription ? metaDescription.content : '' };
+
+function i18nValue(key, n){
+  const value = I18N_EN[key];
+  return value == null ? null : value.replace(/\{n\}/g, n || '');
+}
+
+function applyLang(lang){
+  currentLang = (lang === 'en') ? 'en' : 'ar';
+  const en   = currentLang === 'en';
+  const root = document.documentElement;
+  root.lang = currentLang;
+  root.dir  = en ? 'ltr' : 'rtl';
+
+  document.querySelectorAll('[data-i18n],[data-i18n-attr]').forEach(el => {
+    const attrPairs = (el.dataset.i18nAttr || '').split(';').filter(Boolean).map(pair => pair.split(':'));
+    let original = i18nOriginals.get(el);
+    if (!original){
+      original = { html: el.dataset.i18n ? el.innerHTML : null, attrs: {} };
+      attrPairs.forEach(([name]) => { original.attrs[name] = el.getAttribute(name); });
+      i18nOriginals.set(el, original);
+    }
+    const n = el.dataset.i18nN;
+    if (el.dataset.i18n){
+      const html = en ? i18nValue(el.dataset.i18n, n) : original.html;
+      if (html != null && el.innerHTML !== html) el.innerHTML = html;
+    }
+    attrPairs.forEach(([name, key]) => {
+      const value = en ? i18nValue(key, n) : original.attrs[name];
+      if (value != null && el.getAttribute(name) !== value) el.setAttribute(name, value);
+    });
+  });
+
+  document.title = en ? I18N_EN['meta.title'] : AR_META.title;
+  if (metaDescription) metaDescription.content = en ? I18N_EN['meta.description'] : AR_META.description;
+
+  const langToggle = document.getElementById('langToggle');
+  const langLabel  = document.getElementById('langLabel');
+  langLabel.textContent = en ? 'العربية' : 'English';
+  langLabel.lang = en ? 'ar' : 'en';
+  langToggle.setAttribute('aria-label', en ? 'التبديل إلى العربية' : 'Switch to English');
+
+  document.querySelectorAll('img[data-fallback-applied]').forEach(img => { img.src = fallbackSvg(); });
+
+  try { localStorage.setItem('famous-lang', currentLang); } catch (e) {}
+  document.dispatchEvent(new CustomEvent('langchange', { detail: currentLang }));
+}
+
+(function initLang(){
+  let saved = null;
+  try { saved = localStorage.getItem('famous-lang'); } catch (e) {}
+  const fromUrl = new URLSearchParams(location.search).get('lang');
+  const lang = (fromUrl === 'en' || fromUrl === 'ar') ? fromUrl : saved;
+  if (lang === 'en') applyLang('en');
+  else if (fromUrl === 'ar'){ try { localStorage.setItem('famous-lang', 'ar'); } catch (e) {} }
+  document.getElementById('langToggle').addEventListener('click', () => {
+    applyLang(currentLang === 'en' ? 'ar' : 'en');
+  });
+})();
+
+/* ==========================================================
    معالجة الصور
 ========================================================== */
-const FALLBACK_SVG = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
+const fallbackSvg = () => "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
   `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
     <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#effaf3"/><stop offset="1" stop-color="#d1f0dd"/></linearGradient></defs>
     <rect width="400" height="300" fill="url(#g)"/>
-    <text x="50%" y="50%" fill="#198b4d" font-family="Alexandria, sans-serif" font-size="34" font-weight="800" text-anchor="middle" dominant-baseline="middle">شهير</text>
+    <text x="50%" y="50%" fill="#198b4d" font-family="Alexandria, sans-serif" font-size="34" font-weight="800" text-anchor="middle" dominant-baseline="middle">${L('شهير', 'Famous POS')}</text>
   </svg>`
 );
 const EXTENSIONS = ['png','jpg','jpeg','webp','PNG','JPG','JPEG','WEBP'];
@@ -1068,7 +1312,7 @@ function bindImageFallback(img){
       this.removeEventListener('error', h);
       if (this.dataset.fallbackApplied) return;
       this.dataset.fallbackApplied = '1';
-      this.src = FALLBACK_SVG;
+      this.src = fallbackSvg();
     });
     return;
   }
@@ -1081,7 +1325,7 @@ function bindImageFallback(img){
     this.removeEventListener('error', handler);
     if (this.dataset.fallbackApplied) return;
     this.dataset.fallbackApplied = '1';
-    this.src = FALLBACK_SVG;
+    this.src = fallbackSvg();
   });
 }
 document.querySelectorAll('img').forEach(bindImageFallback);
@@ -1163,7 +1407,7 @@ const lightbox    = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 function openLightbox(src, alt){
   lightboxImg.src = src;
-  lightboxImg.alt = alt || 'صورة من داخل النظام';
+  lightboxImg.alt = alt || L('صورة من داخل النظام', I18N_EN['lightbox.alt']);
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1217,47 +1461,81 @@ sections.forEach(sec => spyObserver.observe(sec));
 
   let userMsgCount = 0;
   let chatInitialized = false;
+  let chatEpoch = 0;   // يزيد عند تغيير اللغة حتى تُلغى الردود المؤجلة من المحادثة السابقة
   const MAX_FREE = 5;
 
   const KB = [
-    { keys:['تحميل','تنزيل','رابط','احمل','نزل','download'],
-      reply:`حمّل النسخة مباشرة من الرابط:\nhttps://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe\n\n📥 أو اضغط زر «تحميل النسخة (exe)» بأعلى الصفحة.` },
-    { keys:['تثبيت','install','تنصيب','setup'],
-      reply:`التثبيت سهل جداً في 3 خطوات 📝\n\n1️⃣ حمّل النظام من الموقع\n2️⃣ اضغط على ملف التثبيت وهو يثبت تلقائياً\n3️⃣ الإعداد الأولى وإدخال البيانات\n\n📸 فيه شرح مصور كامل بقسم «دليل التثبيت» بالصفحة.` },
-    { keys:['مميزات','ميزات','خصائص','features'],
-      reply:`أهم مميزات «شهير» ✨\n\n🚀 أداء صاروخي ولحظي\n🖥️ شاشة بيع فورية + قارئ باركود\n⚙️ نظام مستقل وذاتي المعمارية\n💻 يشتغل على جميع الأجهزة حتى الضعيفة\n🛡️ قاعدة بيانات فولاذية الآمان\n🎨 واجهة UI استثنائية وسهلة` },
-    { keys:['شاشة','شاشات','صور','screens','لقطات','جولة'],
-      reply:`فيه جولة كاملة بالصور داخل قسم «تعرّف» بالصفحة، تعرض 7 شاشات من داخل النظام (البيع، المخزون، التقارير، الفواتير... إلخ).\n\n👀 اضغط على أي صورة لعرضها بالحجم الكامل.` },
-    { keys:['يوزر','مستخدم','باسورد','كلمة المرور','password','user','دخول','login','تسجيل'],
-      reply:`بيانات الدخول بتتحدد بعد التثبيت من إعدادات النظام، وتقدر تتواصل مع الدعم الفني على 0553183438 لو احتجت مساعدة في الدخول.` },
-    { keys:['دعم','مساعدة','مشكلة','support','help','مساعده'],
-      reply:`فريق الدعم الفني متاح لخدمتك على مدار الساعة 🛠️\n\n📞 اتصال مباشر: 0553183438\n💬 واتساب: 0553183438\n\nتقدر تتواصل بأي وقت لحل أي استفسار.` },
-    { keys:['مطور','مبرمج','مطور البرنامج','محمد','زيدان','developer'],
-      reply:`مطوّر نظام «شهير» المحاسبي هو المبرمج السعودي:\n\n👨‍💻 محمد زيدان\n\n📞 للتواصل: 0553183438\n💬 واتساب: 0553183438\n\nتقدر تتعرّف عليه أكثر من قسم «المطوّر» بالصفحة.` },
-    { keys:['اجهزة','أجهزة','جهاز','كمبيوتر','موبايل','جوال','ويندوز','windows'],
-      reply:`«شهير» يشتغل بكفاءة عالية على: 💻\n\n• جميع إصدارات ويندوز (حتى القديمة)\n• الأجهزة الضعيفة الإمكانيات\n• ما يحتاج تحديث للهاردوير\n\nخفيف جداً ومتوافق كلياً مع كل الأجهزة.` },
-    { keys:['قاعدة','بيانات','database','امان','أمان','حماية'],
-      reply:`قاعدة بيانات «شهير» فولاذية الآمان 🛡️\n\n• ثابتة ومستقرة تماماً\n• تحمي بياناتك حتى لو صار انهيار بالويندوز\n• نسخ احتياطي تلقائي\n• ما تفقد أي معلومة أبداً` },
-    { keys:['فاتورة','فواتير','تقارير','تقرير','invoice','report'],
-      reply:`«شهير» يوفر نظام فواتير وتقارير متكامل 📊\n\n• فواتير بيع فورية\n• تقارير مبيعات لحظية\n• تقارير مخزون دقيقة\n• تقارير أرباح وخسائر\n\nكل شي بضغطة زر!` },
-    { keys:['مخزون','جرد','اصناف','أصناف','stock'],
-      reply:`إدارة المخزون في «شهير» 📦\n\n• جرد فوري وسريع\n• تتبع حركة الأصناف\n• تنبيهات نقص المخزون\n• تقارير دقيقة للمخزون\n• دعم قارئ الباركود` },
-    { keys:['باركود','barcode','قارئ'],
-      reply:`إي نعم! «شهير» يدعم قارئ الباركود بشكل كامل 🔍\n\n• قراءة فورية للأصناف\n• إتمام البيع بضغطة زر\n• بحث سريع عن المنتجات\n• متوافق مع جميع أنواع قارئات الباركود` },
-    { keys:['شكرا','شكراً','thanks','thank'],
-      reply:`على الرحب والسعة عملينا العزيز 💚\n\nإحنا هنا لخدمتك بأي وقت. تحتاج مساعدة ثانية؟` },
-    { keys:['مرحبا','السلام','اهلا','أهلا','هلا','hello','hi'],
-      reply:`هلا والله 🌟\n\nكيف أقدر أساعدك اليوم؟ اختر من الأزرار تحت أو اكتب سؤالك بحرية.` }
+    { keys:['تحميل','تنزيل','رابط','احمل','نزل','download','installer','link'],
+      reply:{
+        ar:`حمّل النسخة مباشرة من الرابط:\nhttps://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe\n\n📥 أو اضغط زر «تحميل النسخة (exe)» بأعلى الصفحة.`,
+        en:`Download the installer directly from this link:\nhttps://github.com/mslfy77-commits/famousposinstaller/releases/download/v1.0.31/FamousPOS-win-Setup.exe\n\n📥 Or click the “Download installer (.exe)” button on the page.` } },
+    { keys:['تثبيت','تنصيب','install','setup','set up'],
+      reply:{
+        ar:`التثبيت سهل جداً في 3 خطوات 📝\n\n1️⃣ حمّل النظام من الموقع\n2️⃣ اضغط على ملف التثبيت وسيُثبَّت تلقائياً\n3️⃣ الإعداد الأولي وإدخال البيانات\n\n📸 يوجد شرح مصوّر كامل في قسم «دليل التثبيت» بالصفحة.`,
+        en:`Installation is very easy — just 3 steps 📝\n\n1️⃣ Download the system from the website\n2️⃣ Run the setup file and it installs automatically\n3️⃣ Complete the initial setup and enter your details\n\n📸 A full illustrated walkthrough is available in the “Installation guide” section of the page.` } },
+    { keys:['مميزات','ميزات','خصائص','feature','benefit','advantage','capabilit'],
+      reply:{
+        ar:`أهم مميزات «شهير» ✨\n\n🚀 أداء صاروخي ولحظي\n🖥️ شاشة بيع فورية + قارئ باركود\n⚙️ نظام مستقل وذاتي المعمارية\n💻 يعمل على جميع الأجهزة حتى الضعيفة\n🛡️ قاعدة بيانات فولاذية الأمان\n🎨 واجهة UI استثنائية وسهلة`,
+        en:`Key features of Famous POS ✨\n\n🚀 Blazing-fast, real-time performance\n🖥️ Instant sales screen + barcode scanner\n⚙️ Standalone, self-contained architecture\n💻 Runs on all devices, even low-spec ones\n🛡️ Rock-solid database security\n🎨 An exceptional, easy-to-use UI` } },
+    { keys:['شاشة','شاشات','صور','لقطات','جولة','screen','image','photo','picture','tour','preview','demo'],
+      reply:{
+        ar:`توجد جولة كاملة بالصور داخل قسم «تعرّف» بالصفحة، تعرض 7 شاشات من داخل النظام (البيع، المخزون، التقارير، الفواتير... إلخ).\n\n👀 اضغط على أي صورة لعرضها بالحجم الكامل.`,
+        en:`There is a full visual tour in the “Tour” section of the page, showing 7 screens from inside the system (sales, inventory, reports, invoices, and more).\n\n👀 Click any image to view it at full size.` } },
+    { keys:['موقعنا','موقعكم','لوكيشن','عنوان','خريطة','خرائط','معرض','زيارة','location','located','address','map','showroom','visit','direction','where are you'],
+      reply:{
+        ar:`يسعدنا تشريفك في معرضنا 📍\n\nموقعنا على خرائط Google:\nhttps://maps.app.goo.gl/gTkDPGX6egFwkDDb9\n\nويمكنك أيضاً مشاهدة الخريطة في قسم «الموقع» بالصفحة.`,
+        en:`We'd be delighted to welcome you at our showroom 📍\n\nFind us on Google Maps:\nhttps://maps.app.goo.gl/gTkDPGX6egFwkDDb9\n\nYou can also view the map in the “Location” section of the page.` } },
+    { keys:['يوزر','مستخدم','باسورد','كلمة المرور','دخول','تسجيل','username','user name','password','login','log in','sign in','credential'],
+      reply:{
+        ar:`تُحدَّد بيانات الدخول بعد التثبيت من إعدادات النظام، ويمكنك التواصل مع الدعم الفني على 0553183438 إذا احتجت إلى مساعدة في الدخول.`,
+        en:`Login details are set after installation from the system settings. If you need help signing in, contact technical support on 0553183438.` } },
+    { keys:['مساعدة','مشكلة','مساعده','دعم فني','الدعم الفني','help','problem','issue','error','trouble','contact','technical support','customer support','support team','phone number','call','whatsapp'],
+      weak:['دعم','support'],
+      reply:{
+        ar:`فريق الدعم الفني متاح لخدمتك على مدار الساعة 🛠️\n\n📞 اتصال مباشر: 0553183438\n💬 واتساب: 0553183438\n\nيمكنك التواصل في أي وقت لحل أي استفسار.`,
+        en:`Our technical support team is available around the clock 🛠️\n\n📞 Direct call: 0553183438\n💬 WhatsApp: 0553183438\n\nReach out anytime and we'll be glad to help.` } },
+    { keys:['مطور','مبرمج','مطور البرنامج','محمد','زاهد','developer','programmer','creator','who made','who built','who developed','mohammed','mohamed','zahed'],
+      reply:{
+        ar:`مطوّر نظام «شهير» المحاسبي هو المبرمج:\n\n👨‍💻 محمد زاهد\n\n📞 للتواصل: 0553183438\n💬 واتساب: 0553183438\n\nيمكنك التعرّف عليه أكثر من قسم «المطوّر» بالصفحة.`,
+        en:`Famous POS was developed by:\n\n👨‍💻 Mohammed Zahed\n\n📞 Contact: 0553183438\n💬 WhatsApp: 0553183438\n\nYou can learn more about him in the “Developer” section of the page.` } },
+    { keys:['اجهزة','أجهزة','جهاز','كمبيوتر','موبايل','جوال','ويندوز','device','computer','pc','laptop','tablet','mobile','phone','windows','hardware','requirement','compatib','specs'],
+      reply:{
+        ar:`«شهير» يعمل بكفاءة عالية على: 💻\n\n• جميع إصدارات ويندوز (حتى القديمة)\n• الأجهزة ضعيفة الإمكانيات\n• لا يحتاج إلى تحديث العتاد\n\nخفيف جداً ومتوافق كلياً مع كل الأجهزة.`,
+        en:`Famous POS runs efficiently on: 💻\n\n• All versions of Windows (even older ones)\n• Low-spec machines\n• No hardware upgrade required\n\nExtremely lightweight and fully compatible with all devices.` } },
+    { keys:['قاعدة','بيانات','امان','أمان','حماية','database','data','security','secure','safe','backup','back up','protect'],
+      reply:{
+        ar:`قاعدة بيانات «شهير» فولاذية الأمان 🛡️\n\n• ثابتة ومستقرة تماماً\n• تحمي بياناتك حتى لو حدث انهيار في ويندوز\n• نسخ احتياطي تلقائي\n• لن تفقد أي معلومة أبداً`,
+        en:`The Famous POS database is rock-solid and secure 🛡️\n\n• Fully robust and stable\n• Protects your data even if Windows crashes\n• Automatic backups\n• You will never lose any information` } },
+    { keys:['فاتورة','فواتير','تقارير','تقرير','invoice','report','receipt','bill'],
+      reply:{
+        ar:`«شهير» يوفر نظام فواتير وتقارير متكامل 📊\n\n• فواتير بيع فورية\n• تقارير مبيعات لحظية\n• تقارير مخزون دقيقة\n• تقارير أرباح وخسائر\n\nكل شيء بضغطة زر!`,
+        en:`Famous POS offers a complete invoicing and reporting system 📊\n\n• Instant sales invoices\n• Real-time sales reports\n• Accurate inventory reports\n• Profit and loss reports\n\nAll at the click of a button!` } },
+    { keys:['مخزون','جرد','اصناف','أصناف','inventory','stock','item','warehouse'],
+      reply:{
+        ar:`إدارة المخزون في «شهير» 📦\n\n• جرد فوري وسريع\n• تتبع حركة الأصناف\n• تنبيهات نقص المخزون\n• تقارير دقيقة للمخزون\n• دعم قارئ الباركود`,
+        en:`Inventory management in Famous POS 📦\n\n• Fast, instant stock counts\n• Item movement tracking\n• Low-stock alerts\n• Accurate inventory reports\n• Barcode scanner support` } },
+    { keys:['باركود','قارئ','barcode','bar code','scan'],
+      reply:{
+        ar:`نعم! «شهير» يدعم قارئ الباركود بشكل كامل 🔍\n\n• قراءة فورية للأصناف\n• إتمام البيع بضغطة زر\n• بحث سريع عن المنتجات\n• متوافق مع جميع أنواع قارئات الباركود`,
+        en:`Yes! Famous POS fully supports barcode scanners 🔍\n\n• Instant item scanning\n• Complete a sale at the click of a button\n• Quick product search\n• Compatible with all types of barcode scanners` } },
+    { keys:['شكرا','شكراً','thank'],
+      reply:{
+        ar:`على الرحب والسعة عميلنا العزيز 💚\n\nنحن هنا لخدمتك في أي وقت. هل تحتاج إلى مساعدة أخرى؟`,
+        en:`You're most welcome 💚\n\nWe're here for you anytime. Is there anything else I can help you with?` } },
+    { keys:['مرحبا','السلام','اهلا','أهلا','هلا','hello','hi','hey','good morning','good evening','salam'],
+      reply:{
+        ar:`أهلاً وسهلاً 🌟\n\nكيف يمكنني مساعدتك اليوم؟ اختر من الأزرار في الأسفل أو اكتب سؤالك بحرية.`,
+        en:`Hello and welcome 🌟\n\nHow can I help you today? Choose one of the buttons below or type your question.` } }
   ];
 
   const quickOptions = [
-    { label:'📥 تحميل البرنامج', value:'تحميل' },
-    { label:'📝 خطوات التثبيت', value:'تثبيت' },
-    { label:'✨ مميزات النظام', value:'مميزات' },
-    { label:'🖥️ شاشات النظام', value:'شاشات' },
-    { label:'📍 موقعنا', value:'موقعنا' },
-    { label:'👨‍💻 المطوّر', value:'المطور' },
-    { label:'📞 الدعم الفني', value:'دعم فني' }
+    { label:{ ar:'📥 تحميل البرنامج', en:'📥 Download software' }, value:{ ar:'تحميل', en:'Download software' } },
+    { label:{ ar:'📝 خطوات التثبيت', en:'📝 Installation steps' }, value:{ ar:'تثبيت', en:'Installation steps' } },
+    { label:{ ar:'✨ مميزات النظام', en:'✨ System features' }, value:{ ar:'مميزات', en:'System features' } },
+    { label:{ ar:'🖥️ شاشات النظام', en:'🖥️ System screens' }, value:{ ar:'شاشات', en:'System screens' } },
+    { label:{ ar:'📍 موقعنا', en:'📍 Our location' }, value:{ ar:'موقعنا', en:'Our location' } },
+    { label:{ ar:'👨‍💻 المطوّر', en:'👨‍💻 Developer' }, value:{ ar:'المطور', en:'Developer' } },
+    { label:{ ar:'📞 الدعم الفني', en:'📞 Technical support' }, value:{ ar:'دعم فني', en:'Technical support' } }
   ];
 
   function escapeHtml(str){
@@ -1271,7 +1549,7 @@ sections.forEach(sec => spyObserver.observe(sec));
     const div = document.createElement('div');
     div.className = 'msg ' + sender;
     if (sender === 'bot'){
-      div.innerHTML = `<img src="logo.png" alt="شهير" class="avatar"><div class="bubble">${linkify(text)}</div>`;
+      div.innerHTML = `<img src="logo.png" alt="${L('شهير', 'Famous POS')}" class="avatar"><div class="bubble">${linkify(text)}</div>`;
     } else {
       div.innerHTML = `<div class="bubble">${escapeHtml(text)}</div>`;
     }
@@ -1283,7 +1561,7 @@ sections.forEach(sec => spyObserver.observe(sec));
     const div = document.createElement('div');
     div.className = 'msg bot';
     div.id = 'typingIndicator';
-    div.innerHTML = `<img src="logo.png" alt="شهير" class="avatar"><div class="typing"><span></span><span></span><span></span></div>`;
+    div.innerHTML = `<img src="logo.png" alt="${L('شهير', 'Famous POS')}" class="avatar"><div class="typing"><span></span><span></span><span></span></div>`;
     chatBody.appendChild(div);
     chatBody.scrollTop = chatBody.scrollHeight;
   }
@@ -1292,11 +1570,27 @@ sections.forEach(sec => spyObserver.observe(sec));
     if (t) t.remove();
   }
 
+  // المفاتيح العربية: بحث مباشر داخل السؤال.
+  // المفاتيح الإنجليزية: من بداية الكلمة، والقصيرة جداً ككلمة كاملة (حتى لا تطابق hi كلمة this).
+  const keyPatterns = new Map();
+  function keyMatches(q, key){
+    const k = key.toLowerCase();
+    if (!/^[\x20-\x7e]+$/.test(k)) return q.includes(k);
+    let pattern = keyPatterns.get(k);
+    if (!pattern){
+      const escaped = k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      pattern = new RegExp('(^|[^a-z0-9])' + escaped + (k.length <= 3 ? '($|[^a-z0-9])' : ''));
+      keyPatterns.set(k, pattern);
+    }
+    return pattern.test(q);
+  }
+
   function findAnswer(question){
     const q = question.toLowerCase().trim();
-    for (const item of KB){
-      for (const key of item.keys){
-        if (q.includes(key.toLowerCase())) return item.reply;
+    // المفاتيح الضعيفة (weak) لا تُستخدم إلا إذا لم يطابق السؤال أي موضوع آخر
+    for (const list of ['keys', 'weak']){
+      for (const item of KB){
+        if ((item[list] || []).some(key => keyMatches(q, key))) return item.reply[currentLang];
       }
     }
     return null;
@@ -1304,18 +1598,27 @@ sections.forEach(sec => spyObserver.observe(sec));
 
   function respond(question){
     showTyping();
+    const epoch = chatEpoch;
     const delay = 650 + Math.random() * 450;
     setTimeout(() => {
+      if (epoch !== chatEpoch) return;
       hideTyping();
       const answer = findAnswer(question);
       if (answer){
         addMessage(answer, 'bot');
       } else {
-        addMessage(`ما فهمت سؤالك بشكل كامل 🤔\n\nلكن أقدر أساعدك في:\n• التحميل والتثبيت\n• المميزات والشاشات\n• المطوّر والدعم الفني\n\nاختر من الأزرار أو أعد صياغة سؤالك.`, 'bot');
+        addMessage(L(`لم أفهم سؤالك بشكل كامل 🤔\n\nلكن يمكنني مساعدتك في:\n• التحميل والتثبيت\n• المميزات والشاشات\n• المطوّر والدعم الفني\n\nاختر من الأزرار أو أعد صياغة سؤالك.`, `I didn't quite catch that 🤔\n\nBut I can help you with:\n• Download and installation\n• Features and screens\n• The developer and technical support\n\nChoose one of the buttons or try rephrasing your question.`), 'bot');
       }
       showQuickOptions();
     }, delay);
   }
+
+  // الأزرار السريعة في صفين، وتُسحب أفقياً بالإصبع (أو بعجلة الفأرة) إذا لم تتسع لها الشاشة
+  chatQuick.addEventListener('wheel', (e) => {
+    if (chatQuick.scrollWidth <= chatQuick.clientWidth || Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
+    e.preventDefault();
+    chatQuick.scrollLeft += e.deltaY * (document.documentElement.dir === 'rtl' ? -1 : 1);
+  }, {passive:false});
 
   function showQuickOptions(){
     chatQuick.innerHTML = '';
@@ -1323,30 +1626,33 @@ sections.forEach(sec => spyObserver.observe(sec));
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'chip';
-      btn.textContent = opt.label;
-      btn.addEventListener('click', () => handleUserMessage(opt.value));
+      btn.textContent = opt.label[currentLang];
+      btn.addEventListener('click', () => handleUserMessage(opt.value[currentLang]));
       chatQuick.appendChild(btn);
     });
+    chatQuick.scrollLeft = 0;
   }
 
   function showWhatsAppCTA(){
     showTyping();
+    const epoch = chatEpoch;
     setTimeout(() => {
+      if (epoch !== chatEpoch) return;
       hideTyping();
-      addMessage(`استفسرت عن ${userMsgCount} أسئلة لين الحين 🌟\n\nللإجراءات الفعلية مثل التخصيص أو حل مشكلة تقنية، التواصل مع الدعم البشري أفضل بكثير وبيخدمك أسرع.\n\nاضغط الزر تحت للتحدث مباشرة مع فريق الدعم الفني:`, 'bot');
+      addMessage(L(`استفسرت عن ${userMsgCount} أسئلة حتى الآن 🌟\n\nللإجراءات الفعلية مثل التخصيص أو حل مشكلة تقنية، التواصل مع الدعم البشري أفضل بكثير وسيخدمك أسرع.\n\nاضغط الزر في الأسفل للتحدث مباشرة مع فريق الدعم الفني:`, `You've asked ${userMsgCount} questions so far 🌟\n\nFor hands-on requests such as customization or fixing a technical issue, our human support team can help you much better and faster.\n\nTap the button below to chat directly with the technical support team:`), 'bot');
       const wrap = document.createElement('div');
       wrap.className = 'msg bot';
       wrap.innerHTML = `
-        <img src="logo.png" alt="شهير" class="avatar">
-        <a href="https://wa.me/966553183438?text=مرحباً%20فريق%20شهير،%20أحتاج%20مساعدة%20في%20نظام%20الكاشير"
+        <img src="logo.png" alt="${L('شهير', 'Famous POS')}" class="avatar">
+        <a href="${L('https://wa.me/966553183438?text=مرحباً%20فريق%20شهير،%20أحتاج%20مساعدة%20في%20نظام%20الكاشير', 'https://wa.me/966553183438?text=Hello%20Famous%20POS%20team%2C%20I%20need%20help%20with%20the%20POS%20system')}"
            target="_blank" rel="noopener"
            style="display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,#25d366 0%,#128c47 100%);color:#fff;padding:12px 22px;border-radius:999px;font-weight:800;font-size:.9rem;text-decoration:none;box-shadow:0 10px 25px rgba(37,211,102,.35);">
-          💬 كلّم الدعم البشري الحين
+          ${L('💬 تحدّث مع الدعم البشري الآن', '💬 Chat with our support team now')}
         </a>
       `;
       chatBody.appendChild(wrap);
       chatBody.scrollTop = chatBody.scrollHeight;
-      setTimeout(() => { userMsgCount = 0; showQuickOptions(); }, 1500);
+      setTimeout(() => { if (epoch !== chatEpoch) return; userMsgCount = 0; showQuickOptions(); }, 1500);
     }, 850);
   }
 
@@ -1364,8 +1670,10 @@ sections.forEach(sec => spyObserver.observe(sec));
     if (chatBadge) chatBadge.style.display = 'none';
     if (!chatInitialized){
       chatInitialized = true;
+      const epoch = chatEpoch;
       setTimeout(() => {
-        addMessage(`هلا والله عملينا العزيز 💚\nكيف أقدر أساعدك اليوم؟\n\nاختر من الأزرار تحت أو اكتب سؤالك بحرية، وبأرد عليك في لحظات.`, 'bot');
+        if (epoch !== chatEpoch) return;
+        addMessage(L(`أهلاً وسهلاً عميلنا العزيز 💚\nكيف يمكنني مساعدتك اليوم؟\n\nاختر من الأزرار في الأسفل أو اكتب سؤالك بحرية، وسأردّ عليك في لحظات.`, `Hello and welcome 💚\nHow can I help you today?\n\nChoose one of the buttons below or type your question, and I'll reply in moments.`), 'bot');
         showQuickOptions();
       }, 350);
     }
@@ -1389,6 +1697,16 @@ sections.forEach(sec => spyObserver.observe(sec));
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && chatWindow.classList.contains('open')) closeChat();
+  });
+
+  // عند تغيير اللغة تبدأ المحادثة من جديد باللغة المختارة
+  document.addEventListener('langchange', () => {
+    chatEpoch++;
+    chatBody.innerHTML = '';
+    chatQuick.innerHTML = '';
+    userMsgCount = 0;
+    chatInitialized = false;
+    if (chatWindow.classList.contains('open')) openChat();
   });
 })();
 </script>
