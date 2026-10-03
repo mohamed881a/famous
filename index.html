@@ -503,6 +503,28 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .dev-contacts{justify-content:center}
 }
 
+/* ==========================================================
+   قسم الموقع على الخريطة
+========================================================== */
+.map-container{
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow-md);
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px;
+}
+.map-container iframe{
+  display:block;
+  width:100%;
+  height:420px;
+  border:0;
+  border-radius:calc(var(--radius) - 6px);
+}
+@media (max-width:640px){
+  .map-container iframe{height:320px}
+}
+
 .final-cta{background:linear-gradient(135deg,#1f2937 0%,#198b4d 100%);color:#fff;text-align:center;padding:86px 0;position:relative;overflow:hidden}
 .final-cta::before{content:'';position:absolute;top:-100px;right:-80px;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.06)}
 .final-cta::after{content:'';position:absolute;bottom:-120px;left:-60px;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.06)}
@@ -603,7 +625,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   .chat-float svg{width:26px;height:26px}
   .chat-tip{display:none}
 
-  /* ✅ نافذة المحادثة ما تاخذ الشاشة كاملة على الجوال */
   .chat-window{
     bottom:156px;
     right:14px;
@@ -650,6 +671,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
         <li><a href="#download" class="nav-link">تحميل</a></li>
         <li><a href="#learn" class="nav-link">تعرّف</a></li>
         <li><a href="#support" class="nav-link">الدعم الفني</a></li>
+        <li><a href="#location" class="nav-link">الموقع</a></li>
         <li><a href="#developer" class="nav-link">المطوّر</a></li>
       </ul>
     </nav>
@@ -854,6 +876,29 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
   </div>
 </section>
 
+<!-- ============ قسم الموقع على الخريطة ============ -->
+<section class="section" id="location">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="eyebrow">موقعنا</span>
+      <h2>زورونا في <span>معرضنا</span></h2>
+      <p>تفضلوا بزيارتنا في موقعنا على الخريطة، فريقنا في خدمتكم دائماً.</p>
+    </div>
+    <div class="map-container reveal">
+      <iframe 
+        src="https://maps.google.com/maps?q=شهير%20للحاسبات&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="420" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        title="موقع شهير للحاسبات على الخريطة">
+      </iframe>
+    </div>
+  </div>
+</section>
+
 <section class="section developer-section" id="developer">
   <div class="container">
     <div class="sec-head reveal">
@@ -919,6 +964,7 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
           <a href="#download">تحميل البرنامج</a>
           <a href="#installSteps">دليل التثبيت المصور</a>
           <a href="#learn">تعرّف (شروحات البرنامج)</a>
+          <a href="#location">الموقع على الخريطة</a>
           <a href="#developer">عن المطوّر</a>
         </div>
       </div>
@@ -1209,6 +1255,7 @@ sections.forEach(sec => spyObserver.observe(sec));
     { label:'📝 خطوات التثبيت', value:'تثبيت' },
     { label:'✨ مميزات النظام', value:'مميزات' },
     { label:'🖥️ شاشات النظام', value:'شاشات' },
+    { label:'📍 موقعنا', value:'موقعنا' },
     { label:'👨‍💻 المطوّر', value:'المطور' },
     { label:'📞 الدعم الفني', value:'دعم فني' }
   ];
